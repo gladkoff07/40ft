@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>Forms</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/main.min.css"><!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
+    <style>
+      nav {
+        margin: 10% 0 0 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    </style>
+  </head>
+  <body>
+    <nav><a href="#modal-thanks" data-fancybox="modal-thanks">Спасибо</a><a href="#modal-consult" data-fancybox="modal-consult">Получить консультацию</a><a href="#modal-tracking" data-fancybox="modal-tracking">Отследить контейнер по номеру</a><a href="#modal-calculation" data-fancybox="modal-calculation">Расчет вместимости контейнера</a><a href="#modal-result" data-fancybox="modal-result">Получить результат</a></nav>
+    <!-- thanks-->
+    <div class="modal modal--thanks" id="modal-thanks">
+      <div class="modal__header">Спасибо за заявку</div>
+      <div class="modal__intro">С учётом сложившейся международной обстановки, повышение уровня гражданского сознания играет важную роль в формировании укрепления моральных ценностей.</div><a class="link-button modal__link" href="#">Вернуться на главную</a>
+    </div>
+    <!-- consult-->
+    <div class="modal" id="modal-consult">
+      <div class="modal__header">Получить консультацию</div>
+      <div class="modal__intro">С учётом сложившейся международной обстановки, повышение уровня гражданского сознания играет важную роль в формировании укрепления моральных ценностей.</div>
+      <form class="modal-form modal__form" action="#">
+        <div class="modal-form__row modal-form__row--between">
+          <div class="modal-form__item modal-form__item--50">
+            <input class="modal-form__input" type="text" name="name" value="" placeholder="" required="required"/>
+            <label class="modal-form__label">Ваше имя*</label>
+          </div>
+          <div class="modal-form__item modal-form__item--50">
+            <input class="modal-form__input" type="text" name="phone" value="" placeholder="" required="required"/>
+            <label class="modal-form__label">Ваш телефон*</label>
+          </div>
+        </div>
+        <div class="modal-form__row">
+          <div class="modal-form__item">
+            <textarea class="modal-form__textarea" name="question" required="required"></textarea>
+            <label class="modal-form__label">Ваш вопрос</label>
+          </div>
+        </div>
+        <div class="modal-form__row">
+          <input class="modal-form__submit" type="submit" name="" value="Получить консультацию" placeholder="" required="required"/>
+        </div>
+      </form>
+    </div>
+    <!-- modal-tracking-->
+    <div class="modal" id="modal-tracking">
+      <div class="modal__header">Отследить контейнер по номеру</div>
+      <div class="modal__intro">С учётом сложившейся международной обстановки, повышение уровня гражданского сознания играет важную роль в формировании укрепления моральных ценностей.</div>
+      <div class="block-tracking modal__block-tracking">
+        <div class="block-tracking__head">Где можно отслеживать контейнеры по трек номеру:</div>
+        <div class="list-tracking block-tracking__list"><a class="list-tracking__item" href="#"><span class="list-tracking__item-img"><img srcset="img/img-post-office.webp 1x, img/img-post-office-2x.webp 2x" src="img/img-post-office.webp" loading="lazy"/></span><span class="list-tracking__item-name">Почта России</span><span class="list-tracking__item-icon">
+              <svg class="icon icon-list-tracking-arrow">
+                <use xlink:href="svg/symbols.svg#icon-list-tracking-arrow"></use>
+              </svg></span></a><a class="list-tracking__item" href="#"><span class="list-tracking__item-img"><img srcset="img/img-post-office.webp 1x, img/img-post-office-2x.webp 2x" src="img/img-post-office.webp" loading="lazy"/></span><span class="list-tracking__item-name">Почта России</span><span class="list-tracking__item-icon">
+              <svg class="icon icon-list-tracking-arrow">
+                <use xlink:href="svg/symbols.svg#icon-list-tracking-arrow"></use>
+              </svg></span></a><a class="list-tracking__item" href="#"><span class="list-tracking__item-img"><img srcset="img/img-post-office.webp 1x, img/img-post-office-2x.webp 2x" src="img/img-post-office.webp" loading="lazy"/></span><span class="list-tracking__item-name">Почта России</span><span class="list-tracking__item-icon">
+              <svg class="icon icon-list-tracking-arrow">
+                <use xlink:href="svg/symbols.svg#icon-list-tracking-arrow"></use>
+              </svg></span></a><a class="list-tracking__item" href="#"><span class="list-tracking__item-img"><img srcset="img/img-post-office.webp 1x, img/img-post-office-2x.webp 2x" src="img/img-post-office.webp" loading="lazy"/></span><span class="list-tracking__item-name">Почта России</span><span class="list-tracking__item-icon">
+              <svg class="icon icon-list-tracking-arrow">
+                <use xlink:href="svg/symbols.svg#icon-list-tracking-arrow"></use>
+              </svg></span></a>
+        </div>
+      </div>
+    </div>
+    <!-- modal-calculation-->
+    <div class="modal modal--calculation" id="modal-calculation">
+      <div class="modal__header">Расчет вместимости контейнера</div>
+      <div class="modal__intro">С учётом сложившейся международной обстановки, повышение уровня гражданского сознания играет важную роль в формировании укрепления моральных ценностей.</div>
+      <form class="modal-form modal-form--calculation modal__form" action="#">
+        <div class="modal-form__box">
+          <div class="modal-form__box-header">Выберите тип контейнера:</div>
+          <div class="modal-form__row">
+            <div class="modal-form__item modal-form__item--50">
+              <div class="select">
+                <input class="select__input" type="hidden" name="" requered="requered"/>
+                <div class="select__head"></div>
+                <div class="select__list">
+                  <div class="select__item">Контейнер 20'HC</div>
+                  <div class="select__item">Контейнер 40'HC</div>
+                  <div class="select__item">Контейнер 20'HC</div>
+                  <div class="select__item">Контейнер 40'HC</div>
+                </div>
+              </div>
+              <label class="modal-form__label">Тип контейнера*</label>
+            </div>
+          </div>
+        </div>
+        <div class="modal-form__box">
+          <div class="modal-form__box-header">Укажите размеры и вес коробов (одной упаковки):</div>
+          <div class="modal-form__row modal-form__row--between">
+            <div class="modal-form__item modal-form__item--50">
+              <input class="modal-form__input" type="number" name="length" value="" placeholder="" required="required"/>
+              <label class="modal-form__label">Длинна, мм*</label>
+            </div>
+            <div class="modal-form__item modal-form__item--50">
+              <input class="modal-form__input" type="number" name="height" value="" placeholder="" required="required"/>
+              <label class="modal-form__label">Высота, мм*</label>
+            </div>
+          </div>
+          <div class="modal-form__row modal-form__row--between">
+            <div class="modal-form__item modal-form__item--50">
+              <input class="modal-form__input" type="number" name="width" value="" placeholder="" required="required"/>
+              <label class="modal-form__label">Ширина, мм*</label>
+            </div>
+            <div class="modal-form__item modal-form__item--50">
+              <input class="modal-form__input" type="number" name="weight" value="" placeholder="" required="required"/>
+              <label class="modal-form__label">Вес, кг*</label>
+            </div>
+          </div>
+        </div>
+        <div class="modal-form__row">
+          <input class="modal-form__submit" type="submit" name="" value="Рассчитать вместимость" placeholder="" required="required"/>
+        </div>
+      </form>
+    </div>
+    <!-- modal-result-->
+    <div class="modal" id="modal-result">
+      <div class="modal__header">Получить результат</div>
+      <div class="modal__intro">С учётом сложившейся международной обстановки, повышение уровня гражданского сознания играет важную роль в формировании укрепления моральных ценностей.</div>
+      <form class="modal-form modal__form" action="#">
+        <div class="modal-form__row modal-form__row--between">
+          <div class="modal-form__item modal-form__item--50">
+            <input class="modal-form__input" type="text" name="name" value="" placeholder="" required="required"/>
+            <label class="modal-form__label">Ваше имя*</label>
+          </div>
+          <div class="modal-form__item modal-form__item--50">
+            <input class="modal-form__input" type="text" name="phone" value="" placeholder="" required="required"/>
+            <label class="modal-form__label">Ваш телефон*</label>
+          </div>
+        </div>
+        <div class="modal-form__row">
+          <input class="modal-form__submit" type="submit" name="" value="Получить результат" placeholder="" required="required"/>
+        </div>
+      </form>
+    </div>
+    <!-- scripts-->
+    <script src="js/vendor.js" defer></script>
+    <script src="js/common.js" defer></script>
+  </body>
+</html>
