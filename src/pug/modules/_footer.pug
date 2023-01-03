@@ -1,0 +1,40 @@
+
+include _block-contact
+
+mixin footer()
+  footer.footer.section
+    .container.row
+      .footer__column.footer__column--first
+        //- logo
+        .footer-logo
+          img(src="img/img-logo-blue.svg" alt="")
+        //- copyright
+        .copyright © 2022 Компания «40 футов company» - надежный партнер в организации импортных и экспортных перевозок.
+        //- privacy-policy
+        a(href="#" class="link-privacy-policy") Политика конфиденциальности
+        //- development
+        .development
+          span.development__text Сделано в
+          a(href="#" class="development__link")
+            +icon('icon-dewelopment')
+      .footer__column.footer__column--second
+        .footer__column-header Услуги
+        //- nav
+        - var listMenuServises = [{link: '#', name: 'Аренда Контейнеров'}, {link: '#', name: 'Продажа Контейнеров'}, {link: '#', name: 'Контейнерные перевозки по России'}, {link: '#', name: 'Контейнерные перевозки из Китая и в Китай'}, {link: '#', name: 'Международные контейнерные перевозки'},]
+        ul.footer-menu
+          each item in listMenuServises
+            li.footer-menu__item
+              a(href=`${item.link}` class="footer-menu__link")= item.name
+      .footer__column.footer__column--three
+        .footer__column-header Клиентам
+        //- nav
+        - var listMenuClients = [{link: '#', name: 'Расчет вместимости контейнера'}, {link: '#', name: 'Отследить контейнер по номеру'}, {link: '#', name: 'Виды контейнеров'},]
+        ul.footer-menu
+          each item in listMenuClients
+            li.footer-menu__item
+              a(href=`${item.link}` class="footer-menu__link")= item.name
+        .footer__column-header О компании
+      .footer__column.footer__column--four
+        .footer__column-header Контакты
+        //- contact
+        +block-contact('')

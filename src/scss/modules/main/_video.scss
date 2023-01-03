@@ -1,0 +1,116 @@
+
+.video {
+	$v: &;
+
+	@include alignJustify(flex-start, center);
+	position: relative;
+
+	&--frame {
+		flex-direction: column;
+
+		#{$v}__play {
+			position: static;
+			height: 80px;
+			margin-bottom: 70px;
+
+			&:hover {
+				width: 80px;
+			}
+		}
+
+		#{$v}__content {
+			width: 100%;
+			margin-left: 0;
+			padding: 0 40% 0 0;
+		}
+	}
+
+	&__play {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 80px;
+		height: 240px;
+		@include alignJustify(flex-start, center);
+		background-color: $colorPeriwinkleCrayola;
+		transition: all $varTrs;
+
+		&-link {
+			margin: 5px 0 0 35px;
+			display: inline-block;
+			cursor: pointer
+		}
+
+		.icon {
+			fill: #262B33;
+		}
+
+		&:hover {
+			width: 100%;
+			background: url(../img/img-pattern.svg), $colorBlackSea;
+
+			.icon {
+				fill: $colorWhite;
+			}
+		}
+	}
+
+	&__content {
+		position: relative;
+		width: calc(100% - 80px);
+		margin-left: 80px;
+		padding: 0 10% 0 39px;
+		color: $colorWhite;
+		z-index: 1;
+
+		&-head {
+			font-family: 'Gilroy SemiBold';
+		}
+
+		&-text {
+			margin-top: 5px;
+			line-height: 1.4;
+		}
+
+		&-time {
+			margin-top: 7px;
+		}
+	}
+
+	@include respond($largeDesktop_1279) {
+
+		&--frame {
+
+			#{$v}__content {
+				padding: 0;
+			}
+		}
+	}
+
+	@include respond($tabletPortrait) {
+		display: none;
+
+		&--frame {
+			display: flex;
+		}
+	}
+
+	@include respond($phoneSm) {
+
+		&--frame {
+
+			#{$v}__play {
+				position: absolute;
+				top: -177px;
+				left: 50%;
+				transform: translateX(-50%);
+				margin-bottom: 0;
+			}
+
+			#{$v}__content {
+				color: $colorDarkGreyBlue;
+				padding-top: 17px;
+			}
+		}
+	}
+}

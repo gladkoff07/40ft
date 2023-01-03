@@ -1,0 +1,60 @@
+
+include _form
+
+mixin modal-sell
+  .modal#modal-sell
+    .modal__header Купить контейнер
+    .modal__intro С учётом сложившейся международной обстановки, повышение уровня гражданского сознания играет важную роль в формировании укрепления моральных ценностей.
+    +form('modal__form')
+
+
+mixin modal-rent
+  .modal#modal-rent
+    .modal__header Арендовать контейнер
+    .modal__intro С учётом сложившейся международной обстановки, повышение уровня гражданского сознания играет важную роль в формировании укрепления моральных ценностей.
+    +form('modal__form')
+
+mixin modal-thanks
+  .modal.modal--thanks#modal-thanks
+    .modal__header Спасибо за заявку
+    .modal__intro С учётом сложившейся международной обстановки, повышение уровня гражданского сознания играет важную роль в формировании укрепления моральных ценностей.
+    a(href="#" class="link-button modal__link") Вернуться на главную
+
+mixin modal-consult
+  .modal#modal-consult
+    .modal__header Получить консультацию
+    .modal__intro С учётом сложившейся международной обстановки, повышение уровня гражданского сознания играет важную роль в формировании укрепления моральных ценностей.
+    +form-consult('modal__form')
+
+mixin modal-tracking
+  .modal#modal-tracking
+    .modal__header Отследить контейнер по номеру
+    .modal__intro С учётом сложившейся международной обстановки, повышение уровня гражданского сознания играет важную роль в формировании укрепления моральных ценностей.
+    .block-tracking.modal__block-tracking
+      .block-tracking__head Где можно отслеживать контейнеры по трек номеру:
+      .list-tracking.block-tracking__list
+        +list-tracking-item
+        +list-tracking-item
+        +list-tracking-item
+        +list-tracking-item
+
+
+mixin list-tracking-item
+  a(href="#" class="list-tracking__item")
+    span.list-tracking__item-img
+      img(srcset=`img/img-post-office.webp 1x, img/img-post-office-2x.webp 2x` src=`img/img-post-office.webp` loading="lazy")
+    span.list-tracking__item-name Почта России
+    span.list-tracking__item-icon
+      +icon('icon-list-tracking-arrow')
+
+mixin modal-calculation
+  .modal.modal--calculation#modal-calculation
+    .modal__header Расчет вместимости контейнера
+    .modal__intro С учётом сложившейся международной обстановки, повышение уровня гражданского сознания играет важную роль в формировании укрепления моральных ценностей.
+    +form-calculation('modal__form')
+
+mixin modal-result
+  .modal#modal-result
+    .modal__header Получить результат
+    .modal__intro С учётом сложившейся международной обстановки, повышение уровня гражданского сознания играет важную роль в формировании укрепления моральных ценностей.
+    +form-result('modal__form')

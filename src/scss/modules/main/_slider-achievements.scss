@@ -1,0 +1,172 @@
+
+.slider-achievements {
+	margin: 0 0 0 -28px;
+	max-width: 343px;
+	padding-top: 8px;
+	color: $colorWhite;
+	
+
+	&__value {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		max-width: 130px;
+		@include fontFamily(120px, 'Gilroy SemiBold');
+		line-height: 1;
+	}
+
+	&__content {
+		// width: calc(100% - 130px);
+		margin-top: 84px;
+		padding-left: 148px;
+
+		&-highlight {
+			@include fontFamily(18px, 'Gilroy SemiBold');
+		}
+
+		&-other {
+			margin-top: 9px;
+		}
+	}
+
+	.swiper-slide {
+		@include alignJustify(flex-start, flex-end);
+		box-sizing: border-box;
+		// min-height: 240px;
+	}
+
+	.swiper-pagination {
+		// top: -7px;
+		top: 4px;
+		right: 16px;
+		bottom: unset;
+		left: unset;
+		width: auto;
+
+		.swiper-pagination-bullet {
+			// width: 10px;
+			// height: 10px;
+			// border: 1px solid transparent;
+			// background-color: transparent;
+			width: 16px;
+			height: 16px;
+			margin: 0 5px;
+			// background-color: rgba(255, 255, 255, 0.3);
+			background: radial-gradient(ellipse at center, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.3) 20%,rgba(255,255,255,0) 20%,rgba(255,255,255,0) 100%);
+			border-radius: 50%;
+			position: relative;
+		}
+
+		.swiper-pagination-bullet-active {
+			// background-color: $colorWhite;
+			background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 20%,rgba(255,255,255,0) 20%,rgba(255,255,255,0) 100%);
+
+			&:before,
+			&:after {
+				@include content('', 0, 0);
+				right: 0px;
+				bottom: 0px;
+				border: 1px solid transparent;
+				border-radius: 50%;
+				// animation: colorBoreder 3s linear infinite;
+			}
+
+			&:before {
+				 animation: colorBorderBefore 3s linear infinite;
+			}
+
+			&::after {
+		    border: 0 solid transparent;
+		    animation: colorBorderAfter 3s linear infinite;
+		  }
+		}
+	}
+
+	@include respond($tabletPortrait) {
+		padding-top: 20px;
+
+		&__value {
+			top: -7px;
+			left: 9px;
+			font-size: 72px;
+		}
+
+		&__content {
+			margin-top: 38px;
+			padding-left: 92px;
+
+			&-highlight {
+				font-size: 16px;
+			}
+
+			&-other {
+				margin-top: 7px;
+				line-height: 1.4;
+			}
+		}
+
+		.swiper-pagination {
+			top: 1px;
+			right: 11px;
+		}
+	}
+}
+
+@keyframes colorBorderBefore {
+	0% {
+    border-top-color: rgba(255, 255, 255, 0.3); // Show borders
+
+    transition:
+      border-top-color 3s linear, // Stagger border appearances
+  }
+
+  50% {
+    border-right-color: rgba(255, 255, 255, 0.3);
+
+  	transition:
+      border-right-color 3s linear 1s,
+  }
+
+  75% {
+    border-bottom-color: rgba(255, 255, 255, 0.3);
+
+    transition:
+      border-bottom-color 3s linear 3s;
+  }
+
+  100% {
+  	border-left-color: rgba(255, 255, 255, 0.3);
+
+  	transition:
+      border-left-color 3s linear 3s;
+  }
+}
+
+
+@keyframes colorBorderAfter {
+
+	0% {
+		border-top: 1px solid rgba(255, 255, 255, 0.3); // Shows border
+    transform: rotate(0deg); // Rotate around circle
+    transition:
+      transform 3s linear 0s,
+      border-left-width 0s linear 0.15s; // Solid edge post-rotation
+	}
+
+	50% {
+		transform: rotate(180deg); // Rotate around circle
+		border-left-width: 1px; // Solid edges, invisible borders
+		transition:
+      transform 3s linear 0s,
+      border-left-width 0s linear 0.15s; // Solid edge post-rotation
+	}
+
+	100% {
+		transform: rotate(360deg); // Rotate around circle
+		border-top: 1px solid rgba(255, 255, 255, 0.3); // Shows border
+		border-right-width: 1px; // Solid edges, invisible borders
+		transition:
+      transform 3s linear 0s,
+      border-left-width 0s linear 0.15s; // Solid edge post-rotation
+	}
+}

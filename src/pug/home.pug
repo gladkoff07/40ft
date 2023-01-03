@@ -1,0 +1,37 @@
+extends template/_main
+
+include modules/_header
+include modules/_home-intro
+include modules/_servises
+include modules/_container-rental
+include modules/_container-selection
+include modules/_company
+include modules/_why-we
+include modules/_questions-form
+include modules/_section-link
+
+block variables
+  - var title = 'Главная страница'
+
+
+block content
+  //- wrapper head
+  .wrapper-head.wrapper-head--home
+    //- header
+    +header
+    //- intro
+    +home-intro
+  //- servises
+  +servises
+  //- container-rental
+  +container-rental('Возьмите в аренду контейнер в любой точке мира')
+  //- container-selection
+  +container-selection
+  //- company
+  +company
+  //- why-we
+  +why-we('','Почему мы?')
+  //- questions-form
+  +questions-form
+  //- section-link
+  +section-link

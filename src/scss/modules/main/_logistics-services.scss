@@ -1,0 +1,27 @@
+
+.logistics-services {
+  padding: 98px 0 99px;
+
+  .section-head__header {
+    max-width: 45%;
+  }
+
+  &__list-servises {
+    margin-top: 28px;
+  }
+
+  @include respond($tabletLandscape) {
+
+    .section-head__header {
+      max-width: 100%;
+    }
+  }
+
+  @include respond($phoneSm) {
+    padding: 48px 0 50px;
+
+    &__list-servises {
+      margin-top: 31px;
+    }
+  }
+}

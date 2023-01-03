@@ -1,0 +1,305 @@
+.form {
+
+  &__row {
+    margin-bottom: 16px;
+    @include alignJustify();
+
+    &--between {
+      justify-content: space-between;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    height: 71px;
+    padding: 0 30px 0 31px;
+    border: none;
+    color: $colorDarkGreyBlue;
+    transition: all $varTrs;
+    outline: none;
+
+    &--33 {
+      width: 32.6%;
+    }
+  }
+
+  &__textarea {
+    width: 100%;
+    height: 70px;
+    padding: 27px 30px 0 31px;
+    border: none;
+    outline: none;
+    resize: none;
+    transition: all $varTrs;
+  }
+
+  &__submit {
+    padding: 27px 133px;
+    border: none;
+    background-color: $colorBlackSea;
+    font-family: 'Gilroy SemiBold';
+    color: $colorWhite;
+    cursor: pointer;
+    outline: none;
+    transition: all $varTrs;
+
+    &:hover {
+      background-color: $colorVioletBlueCrayola;
+    }
+  }
+
+  &__personal-data {
+    margin: 20px 0 0 2.3%;
+    max-width: 270px;
+  }
+
+  @include respond($tabletPortrait) {
+
+    &__row {
+      // margin-bottom: 0;
+    }
+
+    &__input {
+
+      &--33 {
+        width: 100%;
+        margin-bottom: 16px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &__submit {
+      width: 100%;
+      padding: 27px 0;
+      text-align: center;
+    }
+
+    &__personal-data {
+      margin: 9px 0 0 1%;
+    }
+  }
+}
+
+.personal-data {
+  @include alignJustify(flex-start, flex-start);
+
+  &__icon {
+    width: 12px;
+  }
+
+  &__text {
+    width: calc(100% - 12px);
+    padding-left: 16px;
+    font-size: 12px;
+    line-height: 1.4;
+
+    a {
+      color: $colorWhite;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.modal-form {
+  $mf: &;
+
+  &__row {
+    @include alignJustify();
+    margin-bottom: 32px;
+
+    &--between {
+      justify-content: space-between;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: 100%;
+
+    &--33 {
+      max-width: 224px;
+    }
+
+    &--50 {
+      max-width: 48%;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    height: 71px;
+    padding: 0 20px 0 32px;
+    border: 1px solid $colorPeriwinkleCrayola_EB;
+    color: $colorDarkGreyBlue;
+    transition: all $varTrs;
+    outline: none;
+
+    &:focus {
+      border-color: $colorBlackSea;
+      outline: none !important;
+
+      & ~ label {
+        top: 0px;
+      }
+    }
+
+    &:not(:focus):valid ~ label {
+      top: 0px;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    left: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $colorWhite;
+    padding: 5px 10px;
+    color: $colorGraySquirrel;
+    // font-family: 'Gilroy SemiBold';
+    transition: all $varTrs;
+    pointer-events: none;
+
+    &--active {
+      top: 0;
+    }
+  }
+
+  &__textarea {
+    padding: 29px 20px 0 32px;
+    resize: none;
+  }
+
+  &__submit {
+    padding: 26px 110px;
+    background-color: $colorBlackSea;
+    border: none;
+    color: $colorWhite;
+    cursor: pointer;
+    transition: all $varTrs;
+
+    &:hover {
+      background-color: $colorVioletBlueCrayola;
+    }
+  }
+
+  &__box {
+    margin-bottom: 30px;
+
+    #{$mf}__row {
+      margin-bottom: 20px;
+    }
+
+    #{$mf}__item {
+
+      &--50 {
+        max-width: 49%;
+      }
+    }
+
+    &-header {
+      margin-bottom: 20px;
+      font-family: 'Gilroy SemiBold';
+      line-height: 1.43;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &--calculation {
+
+    #{$mf}__submit {
+      padding: 26px 0;
+      width: 49%;
+      text-align: center;
+    }
+  }
+
+  @include respond($tabletPortrait) {
+
+    &__row {
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+
+    &__item {
+      margin-bottom: 16px;
+
+      &--33 {
+        max-width: 100%;
+      }
+
+      &--50 {
+        max-width: 100%;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    &__input {
+      padding: 0 20px 0 20px;
+
+      &:focus {
+
+        & ~ label {
+          font-size: 10px;
+        }
+      }
+
+      &:not(:focus):valid ~ label {
+        font-size: 10px;
+      }
+    }
+
+    &__label {
+      left: 20px;
+    }
+
+    &__submit {
+      padding: 26px 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    &__box {
+      margin-bottom: 19px;
+
+      &-header {
+        margin-bottom: 17px;
+      }
+
+      #{$mf}__row {
+        margin-bottom: 16px;
+      }
+
+      #{$mf}__item {
+
+        &--50 {
+          max-width: 100%;
+        }
+      }
+    }
+
+    &--calculation {
+
+      #{$mf}__submit {
+        width: 100%;
+      }
+    }
+  }
+}

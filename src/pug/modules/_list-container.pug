@@ -1,0 +1,13 @@
+
+mixin list-container(className)
+  div(class=`list-container ${className}`)
+    +list-container-item('img-list-container-40', 'img-list-container-40-2x', 'Контейнеры 40’HC высокие', 'С учётом сложившейся международной обстановки, повышение уровня гражданского сознания играет важную роль в формировании укрепления моральных ценностей. Принимая во внимание показатели успешности, понимание сути ресурсосберегающих вывода текущих активов.')
+    +list-container-item('img-list-container-20', 'img-list-container-20-2x', 'Контейнеры 20’HC высокие', 'С учётом сложившейся международной обстановки, повышение уровня гражданского сознания играет важную роль в формировании укрепления моральных ценностей. Принимая во внимание показатели успешности, понимание сути ресурсосберегающих вывода текущих активов.')
+
+mixin list-container-item(img, img2x, name, content)
+  a(href="#" class="list-container__item")
+    .list-container__img
+      img(srcset=`img/${img}.webp 1x, img/${img2x}.webp 2x` src=`img/${img}.webp` loading="lazy")
+    .list-container__name= name
+    .list-container__content= content
+    span(class="link-readmore list-container__link") Подробнее

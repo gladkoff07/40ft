@@ -1,0 +1,12 @@
+
+include _list-servises
+
+mixin servises-other
+  section.servises-other
+    .container
+      .section-head
+        h2.section-header.section-head__header Вас также могут заинтересовать другие наши услуги
+        .section-head__content
+          .section-head__content-text С учётом сложившейся международной обстановки, повышение уровня гражданского сознания играет важную роль в формировании укрепления моральных ценностей.
+      //- list servises container
+      +list-servises('servises-other__list-container')

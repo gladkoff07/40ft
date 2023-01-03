@@ -1,0 +1,87 @@
+
+.progress {
+	padding: 121px 0 120px;
+	background: url(../img/img-pattern.svg) repeat-x, $colorBlackSea;
+
+	@include respond($largeDesktop_1279) {
+		padding: 50px 0;
+	}
+
+	@include respond($phoneSm) {
+		padding: 36px 0 31px;
+	}
+}
+
+.list-progress {
+	$lp: &;
+
+	@include alignJustify(space-between, center);
+	color: $colorWhite;
+
+	&__item {
+		width: 19%;
+	}
+
+	&__number {
+		@include fontFamily(60px, 'Gilroy SemiBold');
+		line-height: 1;
+
+		&-text {
+			margin-left: 15px;
+			@include fontFamily(18px, 'Gilroy Regular');
+		}
+	}
+
+	&__description {
+		margin-top: 20px;
+		max-width: 80%;
+		line-height: 1.4;
+	}
+
+	@include respond($largeDesktop_1279) {
+		justify-content: center;
+		align-items: flex-start;
+
+		&__item {
+			width: 30%;
+			margin: 0 1% 2%;
+		}
+	}
+
+	@include respond($tabletPortrait) {
+
+		&__item {
+			width: 50%;
+			margin: 0 0 2%;
+		}
+	}
+
+	@include respond($phoneSm) {
+		justify-content: space-between;
+
+		&__item {
+			width: 47%;
+			margin: 0 0 23px;
+
+			&:last-of-type {
+				margin: 0 auto;
+
+				#{$lp}__description {
+					text-align: center;
+				}
+			}
+		}
+
+		&__number {
+			font-size: 40px;
+
+			&-text {
+				font-size: 17px;
+			}
+		}
+
+		&__description {
+			max-width: 100%;
+		}
+	}
+}

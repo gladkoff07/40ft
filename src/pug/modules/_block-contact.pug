@@ -1,0 +1,57 @@
+
+mixin block-contact(className)
+  div(class=`block-contact ${className}`)
+    .block-contact__item
+      .block-contact__item-icon
+        +icon('icon-footer-contact-phone')
+      .block-contact__item-data
+        .block-contact__item-name Москва:
+        a(href="tel:+74994994920" class="block-contact__phone")
+          b +7 (499) 499-40-20
+    .block-contact__item
+      .block-contact__item-icon
+        +icon('icon-footer-contact-phone')
+      .block-contact__item-data
+        .block-contact__item-name Санкт-питербург:
+        a(href="tel:+78126481451" class="block-contact__phone")
+          b +7 (812) 648-14-51
+    .block-contact__item
+      .block-contact__item-icon
+        +icon('icon-footer-contact-email')
+      .block-contact__item-data
+        a(href="mailto: info@40ft.company" class="block-contact__email") info@40ft.company
+    .block-contact__item
+      .block-contact__item-icon
+        +icon('icon-footer-contact-place')
+      .block-contact__item-data
+        .block-contact__text 117105, БЦ «ПОРТПЛАЗА», Москва, Проектируемый пр-д д.6
+
+
+mixin block-contact-page(className)
+  div(class=`block-contact ${className}`)
+    .block-contact__item
+      .block-contact__item-icon
+        +icon('icon-footer-contact-phone')
+      .block-contact__item-data
+        .block-contact__item-name Москва:
+        a(href="tel:+74994994920" class="block-contact__phone")
+          b +7 (499) 499-40-20
+    .block-contact__item
+      .block-contact__item-icon
+        +icon('icon-footer-contact-phone')
+      .block-contact__item-data
+        .block-contact__item-name Санкт-питербург:
+        a(href="tel:+78126481451" class="block-contact__phone")
+          b +7 (812) 648-14-51
+    .block-contact__item
+      .block-contact__item-icon
+        +icon('icon-footer-contact-email')
+      .block-contact__item-data
+        .block-contact__item-name E-mail
+        a(href="mailto: info@40ft.company" class="block-contact__email") info@40ft.company
+    .block-contact__item
+      .block-contact__item-icon
+        +icon('icon-footer-contact-place')
+      .block-contact__item-data
+        .block-contact__item-name Адрес:
+        .block-contact__text 117105, БЦ «ПОРТПЛАЗА», Москва, Проектируемый пр-д д.6

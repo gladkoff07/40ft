@@ -1,0 +1,32 @@
+
+.attitude {
+	padding: 100px 0 100px;
+
+	.section__content {
+		margin-top: 46px;
+	}
+
+	.section-header {
+		max-width: 65%;
+		margin-bottom: 19px;
+	}
+
+	@include respond($tabletPortrait) {
+		padding: 48px 0 51px;
+
+		.section__content {
+			margin-top: 0;
+			order: 0;
+
+			.section-header {
+				max-width: 100%;
+				margin-bottom: 19px;
+			}
+		}
+
+		.section__frame {
+			width: 100%;
+			order: 1;
+		}
+	}
+}

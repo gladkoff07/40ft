@@ -1,0 +1,17 @@
+
+mixin section-link
+  .section-link.section
+    .container
+      //- list link
+      ul.list-link
+        +list-link-item('icon-list-link-calculation', 'Расчет вместимости контейнера')
+        +list-link-item('icon-list-link-track', 'Отследить контейнер по номеру')
+        +list-link-item('icon-list-link-views', 'Виды контейнеров')
+        +list-link-item('icon-list-link-consultation', 'Получить консультацию')
+
+mixin list-link-item(icon, text)
+  li.list-link__item
+    a(href="#" class="list-link__link")
+      span.list-link__icon
+        +icon(icon)
+      span.list-link__text= text

@@ -1,0 +1,33 @@
+extends template/_main
+
+include modules/_header-inner-color
+include modules/_breadcrumbs
+include modules/_page-contact
+include modules/_questions-form
+include modules/_section-link
+
+block variables
+  - var title = 'Контакты'
+
+
+block content
+  //- wrapper head
+  .wrapper-head.wrapper-head--page
+    //- header
+    +header-inner-color
+    //- intro
+    section.page-intro.page-intro--periwinkle-crayola
+      .container
+        //- breadcrumbs
+        +breadcrumbs('page-intro__breadcrumbs', 'Главная', 'Контакты')
+        //- header 
+        h1.page-header.page-header--small.page-intro__header Контакты
+  //- main
+  main.main.section
+    .container
+      //- page contact
+      +page-contact
+  //- questions-form
+  +questions-form
+  //- section-link
+  +section-link

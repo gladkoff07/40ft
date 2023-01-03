@@ -1,0 +1,93 @@
+
+.servises-page-info {
+  @include alignJustify(space-between, flex-start);
+  margin-bottom: -3px;
+
+  &__img {
+    width: 41.1%;
+  }
+
+  &__content {
+    width: 49.5%;
+    padding-top: 35px;
+
+    .section-header {
+      margin-bottom: 23px;
+    }
+
+    p {
+      margin-bottom: 20px;
+      line-height: 1.4;
+
+      b {}
+
+      &:nth-last-child(-n+2) {
+        margin-bottom: 10px;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    ul {
+      margin-bottom: 19px;
+
+      li {
+        position: relative;
+        margin-bottom: 10px;
+        padding-left: 40px;
+        line-height: 1.4;
+
+        &:before {
+          @include content('', 2px, 9px);
+          width: 20px;
+          height: 2px;
+          background-color: $colorBlackSea;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  @include respond($tabletLandscape) {
+    flex-direction: column;
+
+    &__img {
+      width: 100%;
+      text-align: center;
+    }
+
+    &__content {
+      width: 100%;
+      // padding-top: 0;
+    }
+  }
+
+  @include respond($phoneSm) {
+    margin-bottom: 2px;
+
+    &__content {
+      padding-top: 25px;
+
+      .section-header {
+        margin-bottom: 13px;
+      }
+
+      p {
+        margin-bottom: 12px;
+      }
+
+      ul {
+        margin-bottom: 11px;
+
+        li {
+          margin-bottom: 12px;
+        }
+      }
+    }
+  }
+}

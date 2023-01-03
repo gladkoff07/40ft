@@ -1,0 +1,13 @@
+
+include _list-container
+
+mixin container-selection
+  section.container-selection
+    .container
+      .section-head
+        h2.section-header.section-head__header Выбрать контейнер #[br] по размеру и модификации
+        .section-head__content
+          .section-head__content-text Мы предлагаем большой выбор контейнеров под любые задачи. Вы можете купить или взять аренду подходящий модуль, заказать предварительный осмотр и оценку, получить квалифицированную консультацию.
+          a(href="" class="link-readmore section-head__content-link") Смотреть все контейнеры
+      //- list container
+      +list-container('container-selection__list')

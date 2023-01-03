@@ -1,0 +1,117 @@
+
+mixin header()
+  header.header.header--home.section
+    .container.row.row--center
+      //- logo
+      .logo.header__logo
+        .logo__img-normal
+          img(src="img/img-logo-white.svg" alt="")
+        .logo__img-active
+          img(src="img/img-logo-blue.svg" alt="")
+      //- menu
+      ul.menu.header__menu
+        li.menu__item
+          a(href="#" class="menu__link") О компании
+        li.menu__item
+          a(href="#" class="menu__link") Контейнеры
+            span.menu__link-icon
+              +icon('icon-arrow-next')
+          .wrapper-menu-inner
+            .container
+              a(href="#back" class="wrapper-menu-inner__head js-link-back")
+                .wrapper-menu-inner__head-icon
+                  +icon('icon-arrow-back')
+                .wrapper-menu-inner__head-name Контейнеры
+              ul.menu-inner.wrapper-menu-inner__menu
+                li.menu-inner__item
+                  a(href="#" class="menu-inner__link") Контейнеры 20'HC высокие
+                li.menu-inner__item
+                  a(href="#" class="menu-inner__link") Контейнеры 20'HC низкие
+                li.menu-inner__item
+                  a(href="#" class="menu-inner__link") Контейнеры 40'HC высокие
+        li.menu__item
+          a(href="#" class="menu__link") Услуги
+            span.menu__link-icon
+              +icon('icon-arrow-next')
+          .wrapper-menu-inner.wrapper-menu-inner--pad-0
+            .container
+              a(href="#back" class="wrapper-menu-inner__head js-link-back")
+                .wrapper-menu-inner__head-icon
+                  +icon('icon-arrow-back')
+                .wrapper-menu-inner__head-name Услуги
+              ul.menu-inner.menu-inner--b-40.wrapper-menu-inner__menu
+                li.menu-inner__item
+                  a(href="#" class="menu-inner__link")
+                    span.menu-inner__link-icon
+                      +icon('icon-menu-sub-sale') 
+                    span.menu-inner__link-name Продажа контейнеров
+                li.menu-inner__item
+                  a(href="#" class="menu-inner__link")
+                    span.menu-inner__link-icon
+                      +icon('icon-menu-sub-rent')
+                    span.menu-inner__link-name Аренда контейнеров
+                li.menu-inner__item
+                  a(href="#" class="menu-inner__link")
+                    span.menu-inner__link-icon
+                      +icon('icon-menu-sub-transporation')
+                    span.menu-inner__link-name Контейнерные перевозки
+                    span.menu__link-icon
+                      +icon('icon-arrow-next')
+                  .wrapper-menu-inner.wrapper-menu-inner--left
+                    .container
+                      .wrapper-menu-inner__box
+                        a(href="#back" class="wrapper-menu-inner__head js-link-back")
+                          .wrapper-menu-inner__head-icon
+                            +icon('icon-arrow-back')
+                          .wrapper-menu-inner__head-name Контейнерные перевозки
+                        ul.menu-inner.menu-inner--last
+                          li.menu-inner__item
+                            a(href="#" class="menu-inner__link") Контейнерные перевозки по территории России
+                          li.menu-inner__item
+                            a(href="#" class="menu-inner__link") Контейнерные перевозки из Китая в Китай
+                          li.menu-inner__item
+                            a(href="#" class="menu-inner__link") Контейнерные перевозки из Турции в Турцию
+                          li.menu-inner__item
+                            a(href="#" class="menu-inner__link") Контейнерные перевозки из Индии в Индию
+                          li.menu-inner__item
+                            a(href="#" class="menu-inner__link") Контейнерные перевозки из Ирана в Иран
+        li.menu__item
+          a(href="#" class="menu__link") Клиентам
+        li.menu__item
+          a(href="#" class="menu__link") Контакты
+      //- phone
+      .block-phone.header__block-phone
+        .block-phone__item
+          .block-phone__icon
+            +icon('icon-block-phone')
+          .block-phone__data
+            a(href="tel: +74959343434" class="block-phone__number") +7 495 934-34-34
+            .block-phone__data-name Отдел продаж
+        .block-phone__item
+          .block-phone__icon
+            +icon('icon-block-phone')
+          .block-phone__data
+            a(href="tel: +78009993434" class="block-phone__number") 8 800 999-34-34
+            .block-phone__data-name Бесплатный
+      //- language
+      .header__select-language
+        .select-language
+          .select-language__row
+            .select-language__value
+              +icon('icon-language-ru')
+            .change-language.js-change-language
+              +icon('icon-change-language')
+          .list-select-language.select-language__list
+            .list-select-language__item
+              +icon('icon-language-ru')
+              span.list-select-language__text Ru
+            .list-select-language__item
+              +icon('icon-language-gb')
+              span.list-select-language__text En
+            .list-select-language__item
+              +icon('icon-language-cn')
+              span.list-select-language__text Ch
+      // mobile button
+      .mobile-button.js-mobile-button
+        +icon('icon-menu-open-white')
+          

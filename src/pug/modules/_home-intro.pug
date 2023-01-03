@@ -1,0 +1,22 @@
+
+include _slider-achievements
+
+mixin home-intro
+	section.home-intro
+		.container
+			h1.page-header.home-intro__header Аренда и продажа морских контейнеров
+			.home-intro__description Но граница обучения кадров предоставляет широкие возможности для вывода текущих активов. Каждый из нас понимает очевидную вещь: убеждённость некоторых оппонентов создаёт необходимость в производственный план целого ряда внеочередных мероприятий с учётом комплекса своевременного выполнения сверхзадачи.
+			//- intro 
+			.intro-actions.home-intro__actions
+				//- video
+				.video.intro-actions__video
+					.video__play
+						a(data-src="https://www.youtube.com/embed/Zv11L-ZfrSg" class="video__play-link" data-fancybox)
+							+icon('icon-video-play')
+					.video__content
+						.video__content-head Видео презентация
+						.video__content-text С учетом международной обстановки, сплоченность команды способствует подготовке и реализации форм воздействия.
+						.video__content-time 1:22
+				//- achievements slider
+				.intro-actions__slider
+					+slider-achievements

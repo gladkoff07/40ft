@@ -1,0 +1,19 @@
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 30px;
+  height: 12px;
+  background-repeat: no-repeat;
+
+  &:after {
+    content: none;
+  }  
+}
+
+.swiper-button-next {
+  background-image: url(../img/img-slider-benefits-button-next.svg);
+}
+
+.swiper-button-prev {
+  background-image: url(../img/img-slider-benefits-button-prev.svg);
+}

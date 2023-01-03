@@ -1,0 +1,19 @@
+
+mixin slider-achievements()
+  div(class=`slider-achievements swiper js-slider-achievements`)
+    .swiper-wrapper
+      +swiper-slide-item(10, 'Лет', 'опыта мультимодальных перевозок')
+      +swiper-slide-item(11, 'Лет', 'опыта мультимодальных перевозок')
+      +swiper-slide-item(12, 'Лет', 'опыта мультимодальных перевозок')
+      +swiper-slide-item(13, 'Лет', 'опыта мультимодальных перевозок')
+
+    .swiper-pagination
+    //- .swiper-button-prev
+    //- .swiper-button-next
+
+mixin swiper-slide-item(value, highlight, other)
+  .swiper-slide
+    .slider-achievements__value= value
+    .slider-achievements__content
+      .slider-achievements__content-highlight= highlight
+      .slider-achievements__content-other= other

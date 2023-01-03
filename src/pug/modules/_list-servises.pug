@@ -1,0 +1,15 @@
+
+mixin list-servises(className)
+  div(class=`list-servises-container ${className}`)
+    +list-servises-container-item('img-servises-container-sale', 'img-servises-container-sale-2x','icon-servises-sale', 'Продажа контейнеров', 'Продажа морских контейнеров – ключевое направление деятельности «40 футов». Продажа б/у морских контейнеров – экономия бюджета без ущерба для эксплуатационных свойств.')
+    +list-servises-container-item('img-servises-container-rent', 'img-servises-container-rent-2x', 'icon-servises-rent', 'Аренда контейнеров', 'Продажа морских контейнеров – ключевое направление деятельности «40 футов». Продажа б/у морских контейнеров – экономия бюджета без ущерба для эксплуатационных свойств.')
+  
+
+mixin list-servises-container-item(img, img2x, icon, name, text)
+  a(href="#" class="list-servises-container__item")
+    img(srcset=`img/${img}.webp 1x, img/${img2x}.webp 2x` src=`img/${img}.webp` loading="lazy")
+    span.list-servises-container__content
+      span.list-servises-container__icon
+        +icon(icon)
+      span.list-servises-container__name= name
+      span.list-servises-container__text= text

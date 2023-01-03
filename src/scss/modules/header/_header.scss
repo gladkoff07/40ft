@@ -1,0 +1,318 @@
+
+@import './_logo';
+@import './_nav';
+@import './_phone';
+@import './_select-language';
+@import './_mobile-nav';
+
+.wrapper-head {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  position: relative;
+
+  &:before {
+    @include content('', 0, 0);
+    right: 0;
+    bottom: 0;
+    background: rgba(6, 14, 31, 0.7);
+    z-index: 1;
+  }
+
+  & > video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+  &--home {
+    height: 950px;
+    background-image: url(../img/img-bg-intro-home.webp);
+
+    &:before {
+      content: none;
+      display: none;
+    }
+  }
+
+  &--page {
+
+    .menu__link,
+      .block-phone__number,
+      .menu-inner__link {
+        color: $colorDarkGreyBlue;
+    }
+
+    .wrapper-menu-inner {
+      background-color: $colorPeriwinkleCrayola;
+    }
+
+    .block-phone__item {
+      border-color: $colorPeriwinkleCrayola_EB;
+    }
+
+    .block-phone__data-name {
+      color: $colorGraySquirrel;
+    }
+
+    .header__select-language {
+      border-color: $colorPeriwinkleCrayola_EB;
+    }
+
+    .list-select-language {
+      background-color: $colorPeriwinkleCrayola;
+    }
+
+    .list-select-language__text {
+      color: $colorDarkGreyBlue;
+    }
+
+    .list-select-language__item:hover .list-select-language__text {
+      color: $colorGraySquirrel;
+    }
+  }
+
+  &--about {
+    // background-image: url(../img/img-bg-intro-about.webp);
+    // background-repeat: no-repeat;
+  }
+
+  &--404 {
+    justify-content: flex-start;
+    min-height: 100vh;
+    background-image: url(../img/img-bg-404.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &--servises-rent {
+    background-image: url(../img/img-bg-wrapper-head-servises-rent.webp);
+  }
+
+  &--servises-sell {
+    background-image: url(../img/img-bg-wrapper-head-servises-sell.webp);
+  }
+
+  &--servises-transportation {
+    background-image: url(../img/img-bg-wrapper-head-servises-transportation.webp);
+
+    .page-intro {
+      padding: 75px 0 93px;
+    }
+  }
+
+  @include respond($tabletLandscape) {
+
+    &--home {
+
+      .header {
+        background-color: transparent;
+        border-color: rgba(255, 255, 255, 0.15);
+      }
+    }
+  }
+
+  @include respond($tabletPortrait) {
+
+    &--home {
+      height: 812px;
+      background-size: cover;
+    }
+  }
+
+  @include respond($phoneSm) {
+
+    &--servises-transportation {
+
+      .page-intro {
+        padding: 47px 0 50px;
+
+        &__header {
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  z-index: 2;
+  transition: all $varTrs;
+
+  & > .container {
+    height: 100px;
+    transition: all $varTrs;
+  }
+
+  &--home {
+    background-color: $colorBlackSea;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+  }
+
+  &--inner-color {
+    background-color: $colorPeriwinkleCrayola;
+    border-bottom: 1px solid $colorPeriwinkleCrayola_EB;
+  }
+
+  &--inner-img {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  &--active {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-color: $colorWhite;
+    z-index: 10;
+    border-color: $colorPeriwinkleCrayola_EB;
+
+    & > .container {
+      height: 75px;
+    }
+
+    .header__logo {
+      max-width: 80px;
+    }
+
+    .logo__img-normal {
+      display: none;
+    }
+
+    .logo__img-active {
+      display: block;
+    }
+
+    .menu__link,
+      .block-phone__number {
+        color: $colorDarkGreyBlue;
+    }
+
+    .block-phone__item {
+      border-color: $colorPeriwinkleCrayola_EB;
+    }
+
+    .block-phone__data-name {
+      color: $colorGraySquirrel;
+    }
+
+    .header__select-language {
+      border-color: $colorPeriwinkleCrayola_EB;
+    }
+
+    .list-select-language {
+      background-color: $colorWhite;
+    }
+
+    .list-select-language__text {
+      color: $colorDarkGreyBlue;
+    }
+
+    .list-select-language__item:hover .list-select-language__text {
+      color: $colorGraySquirrel;
+    }
+
+    .icon-block-phone,
+    .icon-change-language {
+      fill: $colorDarkGreyBlue;
+    }
+  }
+
+  &__logo {
+    max-width: 104px;
+  }
+
+  &__menu {
+    margin-left: 4%;
+  }
+
+  &__block-phone {
+    height: 100%;
+    margin-left: auto;
+  }
+
+  &__select-language {
+    height: 100%;
+    padding: 0 29px 0 29px;
+    @include alignJustify(center, center);
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+    // padding: 43px 29px 0 27px;
+  }
+
+  @include respond($largeDesktop_1365) {
+
+    &__logo {
+      max-width: 90px;
+    }
+  }
+
+  @include respond($largeDesktop_1279) {
+
+    &--active {
+
+      .header__logo {
+        max-width: 70px;
+      }
+    }
+
+    &__logo {
+      max-width: 70px;
+    }
+
+    &__select-language {
+      padding: 0 15px 0 15px;
+    }
+  }
+
+  @include respond($tabletLandscape) {
+    padding: 16px 0;
+    border-bottom: 1px solid $colorPeriwinkleCrayola_EB;
+
+    &--active {
+      background-color: $colorWhite !important;
+      border-color: $colorPeriwinkleCrayola_EB !important;
+
+      .icon-menu-open-white {
+        fill: $colorDarkGreyBlue;
+      }
+    }
+
+    & > .container {
+      height: auto;
+    }
+
+    &--inner-img {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    &__select-language {
+      height: auto;
+      border: none;
+      padding: 0;
+    }
+  }
+
+  @include respond($tabletPortrait) {
+
+    &--active {
+
+      .header__logo {
+        max-width: 60px;
+      }
+    }
+
+    &__logo {
+      max-width: 60px;
+    }
+  }
+}

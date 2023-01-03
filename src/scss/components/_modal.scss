@@ -1,0 +1,94 @@
+
+.modal {
+  display: none;
+  max-width: 904px;
+  padding: 75px 7.5% 75px;
+  align-items: flex-start;
+
+  &--thanks {
+    text-align: center;
+    align-items: center;
+  }
+
+  &--calculation {
+    padding: 75px 10.1% 75px;
+  }
+
+  &__header {
+    @include fontFamily(30px, 'Gilroy SemiBold');
+  }
+
+  &__intro {
+    margin-top: 25px;
+  }
+
+  &__form {
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  &__link {
+    margin-top: 30px;
+    padding: 27px 95px;
+  }
+
+  &__block-tracking {
+    margin-top: 20px;
+  }
+
+  .carousel__button.is-close {
+    top: 35px;
+    right: 45px;
+    padding: 5px;
+    height: auto;
+    width: auto;
+
+    svg {
+      width: 18px;
+      height: 18px;
+      stroke: #737780;
+    }
+  }
+
+  @include respond($tabletLandscape) {
+    padding: 60px 3%;
+  }
+
+  @include respond($tabletPortrait) {
+    padding: 40px 11% 45px;
+
+    &__header {
+      font-size: 24px;
+    }
+
+    &__intro {
+      margin-top: 12px;
+      line-height: 1.43;
+    }
+
+    &__form {
+      margin-top: 20px;
+    }
+
+    .carousel__button.is-close {
+      top: 12px;
+      right: 12px;
+    }
+  }
+
+  @include respond($phoneSm) {
+    max-width: 340px;
+
+    &--thanks {
+      text-align: left;
+      align-items: flex-start;
+    }
+
+    &__link {
+      margin-top: 20px;
+      width: 100%;
+      padding: 27px 0;
+      text-align: center;
+    }
+  }
+}

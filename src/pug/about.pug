@@ -1,0 +1,49 @@
+extends template/_main
+
+include modules/_header-inner-img
+include modules/_breadcrumbs
+include modules/_about-info
+include modules/_mission
+include modules/_attitude
+include modules/_progress
+include modules/_staff
+include modules/_questions-form
+include modules/_section-link
+
+block variables
+  - var title = 'О компании'
+
+
+block content
+  //- wrapper head
+  .wrapper-head.wrapper-head--about.section
+    // video 
+    video(playsinline autoplay muted loop)
+      source( src="video/video-background.mp4" type="video/mp4")
+    // header
+    +header-inner-img
+    //- intro
+    section.page-intro.page-intro--color-white
+      .container
+        // breadcrumbs
+        +breadcrumbs('breadcrumbs--color-white page-intro__breadcrumbs', 'Главная', 'О компании')
+        // header page
+        h1.page-header.page-header--small.page-intro__header О компании
+        .page-intro__description Каждый из нас понимает очевидную вещь: убеждённость некоторых оппонентов создаёт необходимость в производственный план целого ряда внеочередных мероприятий с учётом комплекса своевременного выполнения сверхзадачи. 
+  // main
+  main.main.section
+    .container
+      // info
+      +about-info
+  // mission
+  +mission
+  // attitude
+  +attitude
+  // progress
+  +progress
+  // staff
+  +staff
+  // questions-form
+  +questions-form
+  // section-link
+  +section-link

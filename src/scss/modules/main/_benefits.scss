@@ -1,0 +1,13 @@
+
+.benefits {
+
+	&__list-servises {
+		margin-top: 27px;
+		margin-bottom: -40px;
+    padding-bottom: 40px;
+	}
+
+	@include respond($phoneSm) {
+		padding: 0 0 42px;
+	}
+}

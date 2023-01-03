@@ -1,0 +1,24 @@
+
+mixin questions-form
+  section.questions-form
+    .container
+      .section-head
+        h2.section-header.section-head__header Остались вопросы?
+        .section-head__content
+          .section-head__content-text С учётом сложившейся международной обстановки, повышение уровня гражданского сознания играет важную роль в формировании укрепления моральных ценностей. Принимая во внимание показатели успешности, понимание сути ресурсосберегающих вывода текущих активов.
+      //- form
+      form(action="#" class="form questions-form__form")
+        .form__row.form__row--between
+          input(type="text" name="name" class="form__input form__input--33" placeholder="Ваше имя*" required)
+          input(type="phone" name="phone" class="form__input form__input--33" placeholder="Ваш телефон*" required)
+          input(type="email" name="email" class="form__input form__input--33" placeholder="E-mail" required)
+        .form__row
+          textarea(name="question" class="form__textarea" placeholder="Ваш вопрос")
+        .form__row
+          input(type="submit" value="Отправить" class="form__submit")
+          .personal-data.form__personal-data
+            .personal-data__icon
+              +icon('icon-personal-data')
+            .personal-data__text Нажимая «Отправить», я даю согласие на
+              | 
+              a(href='#') обработку персональных данных

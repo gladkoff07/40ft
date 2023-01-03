@@ -1,0 +1,14 @@
+
+mixin list-servises-transportation(className)
+  div(class=`list-servises-transportation ${className}`)
+    +list-servises-transportation-item('icon-country-ru', 'Контейнерные перевозки по территории России')
+    +list-servises-transportation-item('icon-country-cn', 'Контейнерные перевозки из Китая и в Китай')
+    +list-servises-transportation-item('icon-country-tr', 'Контейнерные перевозки из Турции и в Турцию')
+    +list-servises-transportation-item('icon-country-in', 'Контейнерные перевозки из Индии и в Индию')
+    +list-servises-transportation-item('icon-country-ir', 'Контейнерные перевозки из Ирана и в Иран')
+
+mixin list-servises-transportation-item(icon, name)
+  a(href="#" class="list-servises-transportation__item")
+    span.list-servises-transportation__icon
+      +icon(icon)
+    span.list-servises-transportation__name= name 

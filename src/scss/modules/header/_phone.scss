@@ -1,0 +1,51 @@
+
+.block-phone {
+  @include alignJustify();
+
+  &__item {
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    // padding: 29px 42px 30px 38px;
+    padding: 0 42px 0 38px;
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  &__data {
+    width: calc(100% - 16px);
+    padding-left: 20px;
+
+    &-name {
+      margin-top: 6px;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.4);
+    }
+  }
+
+  &__number {
+    font-family: 'Gilroy SemiBold';
+    color: $colorWhite;
+    text-decoration: none;
+  }
+
+  @include respond($largeDesktop_1279) {
+
+    &__item {
+      padding: 0 15px 0 15px;
+    }
+  }
+
+  @include respond($tabletLandscape) {
+
+    &__item {
+      width: 50%;
+      padding: 14px 15px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+  }
+}

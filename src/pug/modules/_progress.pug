@@ -1,0 +1,16 @@
+
+mixin progress
+  .progress.section
+    .container
+      .list-progress
+        +list-progress-item(10, 'Лет', 'опыта мультимодальных перевозок')
+        +list-progress-item(12296, 'TEU', 'собственного контейнерного парка в обороте')
+        +list-progress-item(2130, 'TEU', 'контейнерного парка свободных')
+        +list-progress-item(19, 'Городов', 'представленности в Азии и России')
+        +list-progress-item(30, 'Терминалов', 'опыта мультимодальных перевозок')
+
+mixin list-progress-item(number, numberText, description)
+  .list-progress__item
+    .list-progress__number= number
+      span.list-progress__number-text= numberText
+    .list-progress__description= description

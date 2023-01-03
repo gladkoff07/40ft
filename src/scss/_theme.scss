@@ -1,0 +1,126 @@
+.container {
+  max-width: 1450px;
+  padding: 0 13px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include respond($largeDesktop) {
+    width: 100%;
+  }
+
+  @include respond($tabletPortrait) {
+    padding: 0 15px;
+  }
+}
+
+.section,
+section {
+  min-width: 1450px;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  @include respond($largeDesktop) {
+    min-width: 100%;
+  }
+}
+
+.link-button {
+  display: inline-block;
+  background-color: $colorBlackSea;
+  font-family: 'Gilroy SemiBold';
+  color: $colorWhite;
+  text-decoration: none;
+  outline: none;
+
+  &:hover {
+    background-color: $colorVioletBlueCrayola;
+  }
+}
+
+.link-readmore {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Gilroy SemiBold';
+  color: $colorBlackSea;
+  text-decoration: none;
+
+  &:before {
+    @include content('', 0, 0);
+    position: relative;
+    margin-right: 22px;
+    width: 30px;
+    height: 2px;
+    background-color: $colorBlackSea;
+    transition: all $varTrs;
+  }
+
+  &:hover {
+
+    &:before {
+      width: 50px;
+    }
+  }
+}
+
+.section-header {
+  @include fontFamily(40px, 'Gilroy SemiBold');
+  line-height: 1.4;
+
+  @include respond($tabletPortrait) {
+    font-size: 30px;
+  }
+}
+
+.page-header {
+  @include fontFamily(72px, 'Gilroy SemiBold');
+  line-height: 1.2;
+
+  &--small {
+    font-size: 60px;
+  }
+
+  @include respond($tabletLandscape) {
+    font-size: 60px;
+  }
+
+  @include respond($tabletPortrait) {
+    font-size: 40px;
+    line-height: 1.4;
+
+    &--small {
+      font-size: 40px;
+    }
+  }
+}
+
+.row {
+  @include alignJustify(flex-start, flex-start);
+
+  &--stretch {
+    align-items: stretch;
+  }
+
+  &--between {
+    justify-content: space-between;
+  }
+
+  &--center {
+    align-items: center;
+  }
+}
+
+.body-fixed {
+  overflow: hidden;
+}
+
+.element-animation {
+  transform: translateX(-50px);
+  transition: all .6s ease-out;
+
+  &--active {
+    transform: translateX(0);
+  }
+}

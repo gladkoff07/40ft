@@ -1,0 +1,11 @@
+
+include _block-contact
+
+mixin page-contact
+  .page-contact
+    +block-contact-page('block-contact--line')
+    .page-contact__maps
+      img(srcset=`img/img-contacts-maps.webp 1x, img/img-contacts-maps-2x.webp 2x` src=`img/img-contacts-maps.webp` loading="lazy")
+      .page-maps-hit
+        img(src="img/img-logo-blue.svg" alt="" loading="lazy")
+

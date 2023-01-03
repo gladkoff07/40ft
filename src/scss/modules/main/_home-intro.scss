@@ -1,0 +1,93 @@
+
+.home-intro {
+	height: calc(100% - 100px);
+	width: 100%;
+	padding: 156px 0 0;
+	color: $colorWhite;
+	z-index: 1;
+
+	.container {
+		height: 100%;
+		position: relative;
+	}
+
+	&__header {
+		max-width: 55%;
+	}
+
+	&__description {
+		max-width: 62%;
+		margin-top: 33px;
+		line-height: 1.4;
+	}
+
+	&__actions {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: 0 13px;
+	}
+
+	@include respond($largeDesktop_1365) {
+
+		&__header {
+			max-width: 90%;
+		}
+
+		&__description {
+			max-width: 100%;
+		}
+	}
+
+	@include respond($tabletLandscape) {
+		padding: 100px 0 0;
+	}
+
+	@include respond($tabletPortrait) {
+		padding: 50px 0 0;
+
+		&__description {
+			margin-top: 21px;
+			line-height: 1.44;
+		}
+
+		&__actions {
+			padding: 0 15px;
+		}
+	}
+}
+
+.intro-actions {
+	@include alignJustify(space-between, stretch);
+
+	&__video {
+		max-width: 500px;
+	}
+
+	&__slider {
+		width: 100%;
+		max-width: 343px;
+		min-height: 240px;
+		padding-top: 25px;
+		background: url(../img/img-pattern.svg) no-repeat, $colorBlackSea;
+		background-repeat: no-repeat;
+	}
+
+	@include respond($tabletLandscape) {
+
+		&__video {
+			max-width: 380px;
+		}
+	}
+
+	@include respond($tabletPortrait) {
+
+		&__slider {
+			max-width: 250px;
+			min-height: 166px;
+			padding-top: 10px;
+			margin-left: auto;
+		}
+	}
+}

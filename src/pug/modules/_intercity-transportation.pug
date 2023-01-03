@@ -1,0 +1,111 @@
+
+mixin intercity-transportation
+  section.intercity-transportation
+    .container.row.row--between
+      .intercity-transportation__data
+        .section-head
+          h2.section-header Междугородние перевозки по России
+        .intercity-transportation__intro-text Контейнер может быть использован не только как средство грузоперевозки, но и в качестве складского помещения, гаража, бытовки или бани. Он легко устанавливается на опоры и комфортен при эксплуатации.
+        //- participating cities
+        .participating-cities.intercity-transportation__cities
+          .participating-cities__head Ускоренные контейнерные перевозки в настоящий момент времени осуществляются в городах: 
+          - var listSity = ['Екатеренбург', 'Челябинск', 'Новосибирск', 'Братск', 'Кемерово', 'Барнаул', 'Красноярск', 'Иркутск', 'Улан-Удэ', 'Чита', 'Благовещенск', 'Свободный',  'Якутск',  'Норильск', 'Хабаровск', 'Комсомосльск на Амуре', 'Владивосток', 'Находка', 'Уссурийск', 'Южно-Сахалинск', 'Магадан', 'Камчатка']
+          ul.list-participating-cities.participating-cities__list
+            each item in listSity
+              li.list-participating-cities__item
+                a(href="#" class="list-participating-cities__link")= item
+      .frame-intercity-maps.intercity-transportation__maps
+        img(src="img/img-country-map.svg" alt="")
+        .frame-intercity-maps-label.frame-intercity-maps-label--one
+          .maps-label.js-maps-label 4
+          //- hint
+          +maps-hint('maps-hint--middle wrapper-maps-label__hint wrapper-maps-label__hint--middle')
+        .frame-intercity-maps-label.frame-intercity-maps-label--two
+          .maps-label.js-maps-label 4
+          //- hint
+          +maps-hint('maps-hint--middle wrapper-maps-label__hint wrapper-maps-label__hint--middle')
+        .frame-intercity-maps-label.frame-intercity-maps-label--three
+          .maps-label.js-maps-label 4
+          //- hint
+          +maps-hint('maps-hint--middle wrapper-maps-label__hint wrapper-maps-label__hint--middle')
+        .frame-intercity-maps-label.frame-intercity-maps-label--four
+          .maps-label.js-maps-label 4
+          //- hint
+          +maps-hint('maps-hint--middle wrapper-maps-label__hint wrapper-maps-label__hint--middle')
+        .frame-intercity-maps-label.frame-intercity-maps-label--five
+          .maps-label.js-maps-label 4
+          //- hint
+          +maps-hint('maps-hint--middle wrapper-maps-label__hint wrapper-maps-label__hint--middle')
+        .frame-intercity-maps-label.frame-intercity-maps-label--six
+          .maps-label.js-maps-label 4
+          //- hint
+          +maps-hint('maps-hint--top wrapper-maps-label__hint wrapper-maps-label__hint--top')
+        .frame-intercity-maps-label.frame-intercity-maps-label--seven
+          .maps-label.js-maps-label 4
+          //- hint
+          +maps-hint('maps-hint--middle wrapper-maps-label__hint wrapper-maps-label__hint--middle')
+        .frame-intercity-maps-label.frame-intercity-maps-label--eight
+          .maps-label.js-maps-label 4
+          //- hint
+          +maps-hint('maps-hint--middle wrapper-maps-label__hint wrapper-maps-label__hint--middle')
+        .frame-intercity-maps-label.frame-intercity-maps-label--nine
+          .maps-label.js-maps-label 4
+          //- hint
+          +maps-hint('maps-hint--top-left wrapper-maps-label__hint wrapper-maps-label__hint--top-left')
+        .frame-intercity-maps-label.frame-intercity-maps-label--ten
+          .maps-label.js-maps-label 4
+          //- hint
+          +maps-hint('maps-hint--top-left wrapper-maps-label__hint wrapper-maps-label__hint--top-left')
+        .frame-intercity-maps-label.frame-intercity-maps-label--eleven
+          .maps-label.js-maps-label 4
+          //- hint
+          +maps-hint('maps-hint--middle-left wrapper-maps-label__hint wrapper-maps-label__hint--middle-left')
+        .frame-intercity-maps-label.frame-intercity-maps-label--twelve 
+          .maps-label.js-maps-label 4
+          //- hint
+          +maps-hint('maps-hint--middle-left wrapper-maps-label__hint wrapper-maps-label__hint--middle-left')
+        .frame-intercity-maps-label.frame-intercity-maps-label--thirteen
+          .maps-label.js-maps-label 4
+          //- hint
+          +maps-hint('maps-hint--middle-left wrapper-maps-label__hint wrapper-maps-label__hint--middle-left')
+        // add
+        .rental-maps-add
+          a(href="#" class="hint-maps-add")
+            span.hint-maps-add__icon
+              +icon('icon-add-loading')
+            span.hint-maps-add__text Показать еще
+
+
+mixin maps-hint(className)
+  div(class=`maps-hint ${className}`)
+    .maps-hint__head
+      .maps-hint__country
+        .maps-hint__country-icon
+          +icon('icon-maps-hint-country-uz')
+        .maps-hint__country-name Россия, Красноярский край, Норильск
+      .maps-hint__icon-change.js-change-maps-hint
+        +icon('icon-maps-hint-change')
+    .maps-hint__body
+      .maps-hint__coordinates 41.3111580, 69.2797370
+      //- list
+      .list-goods-maps-hint.maps-hint__list
+        .list-goods-maps-hint__item
+          .list-goods-maps-hint__img
+            img(srcset=`img/list-goods-maps-hint-40.webp 1x, img/list-goods-maps-hint-40-2x.webp 2x` src=`img/list-goods-maps-hint-40.webp`)
+          .list-goods-maps-hint__content
+            .list-goods-maps-hint__name Контейнер 40'HC
+            .list-goods-maps-hint__availability
+              span.list-goods-maps-hint__availability-icon
+                +icon('icon-maps-hint-yes')
+              span.list-goods-maps-hint__availability-text В наличии
+      //- manager
+      .manager-maps-hint.maps-hint__manager
+        .manager-maps-hint__head Менеджер региона
+        .manager-maps-hint__profile
+          .manager-maps-hint__avatar
+            img(srcset=`img/img-avatart.webp 1x, img/img-avatart-2x.webp 2x` src=`img/img-avatart.webp`)
+            .manager-maps-hint__status.manager-maps-hint__status--online
+          .manager-maps-hint__data
+            .manager-maps-hint__name Сарвар Каримов
+            .manager-maps-hint__position Руководитель по странам СНГ и СА
+      a(href="#" class="maps-hint__link-button") Получить консультацию

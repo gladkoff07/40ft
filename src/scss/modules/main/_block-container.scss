@@ -1,0 +1,315 @@
+
+.block-container {
+	@include alignJustify(space-between, flex-start);
+
+	&__slider {
+		width: 49.5%;
+	}
+
+	&__data {
+		width: 41%;
+	}
+
+	@include respond($largeDesktop_1279) {
+
+		&__data {
+			width: 47%;
+		}
+	}
+
+	@include respond($tabletPortrait) {
+
+		&__slider {
+			width: 100%;
+		}
+
+		&__data {
+			width: 100%;
+			margin-top: 20px;
+		}
+	}
+}
+
+.container-data {
+
+	p {
+		margin-bottom: 10px;
+		line-height: 1.4;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	&__specifications {
+		margin-top: 31px;
+	}
+
+	&__availability {
+		margin-top: 30px;
+	}
+
+	&__action {
+		margin-top: 30px;
+	}
+
+	@include respond($tabletPortrait) {
+
+		p {
+			max-width: 99%;
+			margin-bottom: 15px;
+		}
+
+		&__specifications {
+			margin-top: 21px;
+		}
+
+		&__availability {
+			margin-top: 24px;
+		}
+	}
+
+	@include respond($phoneSm) {
+
+		&__action {
+			margin-top: 0;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+	}
+}
+
+.container-specifications {
+
+	&__item {
+		position: relative;
+		@include alignJustify(space-between, flex-start);
+		margin-bottom: 10px;
+		line-height: 1.4;
+
+		&:after {
+			@include content('', 0, auto);
+			bottom: 6px;
+			right: 0;
+			border-bottom: 2px dotted #C2C5CC;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__name {
+		padding-right: 5px;
+		background-color: $colorWhite;
+		z-index: 1;
+	}
+
+	&__value {
+		padding-left: 5px;
+		background-color: $colorWhite;
+		font-family: 'Gilroy SemiBold';
+		z-index: 1;
+	}
+
+	@include respond($tabletPortrait) {
+
+		&__item {
+			margin-bottom: 11px;
+		}
+
+		&__name {
+			padding-right: 3px;
+		}
+
+		&__value {
+			padding-left: 3px;
+		}
+	}
+}
+
+.container-availability {
+	@include alignJustify(flex-start, center);
+	color: $colorIndianGreen;
+
+	&__icon {
+		margin-right: 14px;
+	}
+
+	&__text {
+		font-family: 'Gilroy SemiBold';
+	}
+}
+
+.data-action {
+	@include alignJustify(space-between, flex-start);
+
+	&__item {
+		font-family: 'Gilroy SemiBold';
+		text-decoration: none;
+
+		&--buy {
+			padding: 27px 75px;
+			background-color: $colorBlackSea;
+			color: $colorWhite;
+
+			&:hover {
+	      background-color: $colorVioletBlueCrayola;
+	    }
+		}
+
+		&--rent {
+			padding: 27px 56px;
+			background-color: $colorPeriwinkleCrayola;
+			color: $colorBlackSea;
+
+			&:hover {
+				background: url(../img/img-pattern.svg), $colorBlackSea;
+				color: $colorWhite;
+			}
+		}
+	}
+
+	@include respond($largeDesktop) {
+
+		&__item {
+
+			&--buy {
+				padding: 27px 60px;
+			}
+
+			&--rent {
+				padding: 27px 40px;
+			}
+		}
+	}
+
+	@include respond($largeDesktop_1279) {
+
+		&__item {
+
+			&--buy {
+				padding: 20px 20px;
+			}
+
+			&--rent {
+				padding: 20px 30px;
+			}
+		}
+	}
+
+	@include respond($tabletLandscape) {
+		flex-direction: column;
+		align-items: stretch;
+
+		&__item {
+			text-align: center;
+
+			&--rent {
+				margin-top: 10px;
+			}
+		}
+	}
+
+
+	@include respond($phoneSm) {
+		flex-direction: row;
+		z-index: 5;
+
+		&__item {
+			width: 50%;
+			text-align: center;
+
+			&--buy {
+				padding: 26px 0;
+			}
+
+			&--rent {
+				padding: 26px 0;
+				margin: 0;
+			}
+		}
+	}
+}
+
+.slider-container {
+	background-color: $colorPeriwinkleCrayola;
+}
+
+.slider-container-big {
+	height: 585px;
+
+	.swiper-slide {
+		height: 100%;
+		@include alignJustify(center, center);
+	}
+
+	.swiper-button-prev, 
+	.swiper-button-next {
+		top: 52.7%;
+	}
+
+	.swiper-button-prev {
+		left: 6%;
+	}
+
+	.swiper-button-next {
+		right: 6%;
+	}
+
+	@include respond($largeDesktop_1279) {
+		height: 500px;
+
+		.swiper-button-prev {
+			left: 3%;
+		}
+
+		.swiper-button-next {
+			right: 3%;
+		}
+	}
+
+	@include respond($tabletLandscape) {
+		height: 370px;
+	}
+
+	@include respond($phoneSm) {
+		height: 265px;
+
+		.swiper-button-prev, 
+		.swiper-button-next {
+			top: 100%;
+		}
+
+		.swiper-button-prev {
+			left: 37%;
+		}
+
+		.swiper-button-next {
+			right: 37%;
+		}
+	}
+}
+
+.slider-container-small {
+	height: 120px;
+	border-top: 1px solid #EBEEF5;
+
+	.swiper-slide {
+		width: 176px;
+		height: 100%;
+		@include alignJustify(center, center);
+		border-right: 1px solid #EBEEF5;
+	}
+
+	@include respond($tabletLandscape) {
+		height: 80px;
+	}
+
+	@include respond($tabletLandscape) {
+		height: 90px;
+		margin-top: 32px;
+	}
+}

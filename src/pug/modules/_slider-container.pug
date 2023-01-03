@@ -1,0 +1,28 @@
+
+mixin slider-container
+  .slider-container
+    div(class=`slider-container-big swiper js-slider-container-big`)
+      .swiper-wrapper
+        .swiper-slide
+          img(srcset=`img/img-slider-container-big-1.webp 1x, img/img-slider-container-big-1-2x.webp 2x` src=`img/img-slider-container-big-1.webp` loading="lazy")
+        .swiper-slide
+          img(srcset=`img/img-slider-container-big-2.webp 1x, img/img-slider-container-big-2-2x.webp 2x` src=`img/img-slider-container-big-2.webp` loading="lazy")
+        .swiper-slide
+          img(srcset=`img/img-slider-container-big-3.webp 1x, img/img-slider-container-big-3-2x.webp 2x` src=`img/img-slider-container-big-3.webp` loading="lazy")
+        .swiper-slide
+          img(srcset=`img/img-slider-container-big-4.webp 1x, img/img-slider-container-big-4-2x.webp 2x` src=`img/img-slider-container-big-4.webp` loading="lazy")
+
+      //- swiper-pagination
+      .swiper-button-prev
+      .swiper-button-next
+
+    div(class=`slider-container-small swiper js-slider-container-small` thumbsSlider="")
+      .swiper-wrapper
+        .swiper-slide
+          img(srcset=`img/img-slider-container-small-1.webp 1x, img/img-slider-container-small-1-2x.webp 2x` src=`img/img-slider-container-small-1.webp` loading="lazy")
+        .swiper-slide
+          img(srcset=`img/img-slider-container-small-2.webp 1x, img/img-slider-container-small-2-2x.webp 2x` src=`img/img-slider-container-small-2.webp` loading="lazy")
+        .swiper-slide
+          img(srcset=`img/img-slider-container-small-3.webp 1x, img/img-slider-container-small-3-2x.webp 2x` src=`img/img-slider-container-small-3.webp` loading="lazy")
+        .swiper-slide
+          img(srcset=`img/img-slider-container-small-4.webp 1x, img/img-slider-container-small-4-2x.webp 2x` src=`img/img-slider-container-small-4.webp` loading="lazy")

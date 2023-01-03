@@ -1,0 +1,12 @@
+
+include _list-benefits-servises
+
+mixin benefits(headerName)
+  section.benefits
+    .container
+      .section-head.section-head--center
+        h2.section-header.section-head__header= headerName 
+        .section-head__content
+          .section-head__content-text Контейнер может быть использован не только как средство грузоперевозки, но и в качестве складского помещения, гаража, бытовки или бани. Он легко устанавливается на опоры и комфортен при эксплуатации.
+      //- list
+      +list-benefits-servises('list-benefits--small benefits__list-servises')

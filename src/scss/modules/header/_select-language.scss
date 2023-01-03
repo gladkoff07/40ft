@@ -1,0 +1,91 @@
+
+.select-language {
+	position: relative;
+	
+	&__row {
+		@include alignJustify(flex-start, flex-start);
+	}
+
+	&__value {
+		height: 14px;
+	}	
+
+	&__list {
+		position: absolute;
+		left: -28px;
+		top: 20px;
+	}
+
+	@include respond($largeDesktop_1279) {
+
+		&__list {
+			left: -15px;
+		}
+	}
+}
+
+.list-select-language {
+	$lsl: &;
+
+	max-height: 0;
+	overflow: hidden;
+	padding: 0 23px 0;
+	background-color: $colorBlackSea;
+	transition: all $varTrs;
+	z-index: 1;
+
+	&__item {
+		display: inline-flex;
+		align-items: center;
+		padding: 6px 5px;
+		cursor: pointer;
+
+		&:hover {
+
+			#{$lsl}__text {
+				color: rgba(255, 255, 255, 0.4);
+			}
+		}
+	}
+
+	&--active {
+		max-height: 200px;
+		padding: 21px 23px 24px;
+		overflow: visible;
+	}
+
+	&__text {
+		margin-left: 7px;
+		@include fontFamily(14px, 'Gilroy SemiBold');
+		color: $colorWhite;
+		transition: all $varTrs;
+	}
+
+	@include respond($largeDesktop_1279) {
+		padding: 0 9px 0;
+
+		&--active {
+			padding: 10px 9px 10px;
+		}
+	}
+}
+
+.change-language {
+	margin-left: 12px;
+	width: 12px;
+	height: 8px;
+	cursor: pointer;
+	
+	.icon {
+		transition: all $varTrs;
+		transform: rotate(180deg);
+		transform-origin: center center;
+	}
+
+	&--active {
+
+		.icon {
+			transform: rotate(0deg);
+		}
+	}
+}

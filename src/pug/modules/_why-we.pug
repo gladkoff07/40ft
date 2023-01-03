@@ -1,0 +1,13 @@
+
+include _list-benefits
+
+mixin why-we(className, headerName)
+  section(class=`why-we ${className}`)
+    .container
+      .section-head
+        h2.section-header.section-head__header= headerName
+        .section-head__content
+          .section-head__content-text С учётом сложившейся международной обстановки, повышение уровня гражданского сознания играет важную роль в формировании укрепления моральных ценностей. Принимая во внимание показатели успешности, понимание сути ресурсосберегающих вывода текущих активов.
+
+      //- list benefits
+      +list-benefits('why-we__list')

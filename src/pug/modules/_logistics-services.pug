@@ -1,0 +1,12 @@
+
+include _list-servises-transportation
+
+mixin logistics-services
+  section.logistics-services
+    .container
+      .section-head.section-head--center
+        h2.section-header.section-head__header Вас также могут заинтересовать логистические услуги
+        .section-head__content
+          .section-head__content-text Контейнер может быть использован не только как средство грузоперевозки, но и в качестве складского помещения, гаража, бытовки или бани. Он легко устанавливается на опоры и комфортен при эксплуатации.
+      //- list-servises-transportation
+      +list-servises-transportation('list-servises-transportation--color logistics-services__list-servises')

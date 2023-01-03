@@ -1,0 +1,251 @@
+
+.icon {
+
+  &-block-phone {
+    width: 16px;
+    height: 16px;
+    fill: $colorWhite;
+  }
+
+  &-block-phone-dark {
+    width: 16px;
+    height: 16px;
+    fill: #262B33;
+  }
+
+  &-language-ru {
+    width: 19px;
+    height: 14px;
+  }
+
+  &-language-gb {
+    width: 19px;
+    height: 14px;
+  }
+
+  &-language-cn {
+    width: 19px;
+    height: 14px;
+  }
+
+  &-change-language {
+    width: 12px;
+    height: 8px;
+    fill: $colorWhite;
+  }
+
+  &-change-language-dark {
+    width: 12px;
+    height: 8px;
+    fill: #262B33;
+  }
+
+  &-video-play {
+    width: 14px;
+    height: 16px;
+  }
+
+  &-list-link-calculation {
+    width: 48px;
+    height: 48px;
+    fill: transparent;
+  }
+
+  &-list-link-track {
+    width: 48px;
+    height: 48px;
+  }
+
+  &-list-link-views {
+    width: 48px;
+    height: 48px;
+    fill: transparent;
+  }
+
+  &-list-link-consultation {
+    width: 48px;
+    height: 48px;
+  }
+
+  &-benefits-terminal {
+    width: 67px;
+    height: 72px;
+    fill: transparent;
+  }
+
+  &-benefits-park {
+    width: 70px;
+    height: 72px;
+  }
+
+  &-benefits-servises {
+    width: 82px;
+    height: 62px;
+    fill: transparent;
+  }
+
+  &-servises-rent {
+    width: 80px;
+    height: 80px;
+  }
+
+  &-servises-sale {
+    width: 80px;
+    height: 80px;
+  }
+
+  &-country-ru {
+    width: 28px;
+    height: 20px;
+  }
+
+  &-country-cn {
+    width: 28px;
+    height: 20px;
+  }
+
+  &-country-tr {
+    width: 28px;
+    height: 20px;
+  }
+
+  &-country-in {
+    width: 28px;
+    height: 20px;
+  }
+
+  &-country-ir {
+    width: 28px;
+    height: 20px;
+  }
+
+  &-dewelopment {
+    width: 52px;
+    height: 11px;
+  }
+
+  &-personal-data {
+    width: 12px;
+    height: 16px;
+  }
+
+  &-footer-contact-phone {
+    width: 16px;
+    height: 17px;
+  }
+
+  &-footer-contact-email {
+    width: 16px;
+    height: 13px;
+  }
+
+  &-footer-contact-place {
+    width: 16px;
+    height: 16px;
+  }
+
+  &-maps-hint-country-uz {
+    width: 28px;
+    height: 20px;
+  }
+
+  &-maps-hint-yes {
+    width: 14px;
+    height: 12px;
+  }
+
+  &-menu-open {
+    width: 20px;
+    height: 14px;
+  }
+
+  &-menu-close {
+    width: 16px;
+    height: 16px;
+  }
+
+  &-menu-open-white {
+    width: 20px;
+    height: 14px;
+    fill: $colorWhite;
+  }
+
+  &-arrow-next {
+    width: 8px;
+    height: 12px;
+  }
+
+  &-arrow-back {
+    width: 8px;
+    height: 12px;
+  }
+
+  &-maps-hint-change {
+    width: 12px;
+    height: 8px;
+  }
+
+  &-benefits-servises-price {
+    width: 80px;
+    height: 80px;
+    fill: transparent;
+  }
+
+  &-benefits-servises-delivery {
+    width: 81px;
+    height: 82px;
+    fill: transparent;
+  }
+
+  &-benefits-servises-save {
+    width: 80px;
+    height: 80px;
+    fill: transparent;
+  }
+
+  &-download {
+    width: 16px;
+    height: 17px;
+  }
+
+  &-list-tracking-arrow {
+    width: 8px;
+    height: 13px;
+  }
+
+  &-add-loading {
+    width: 16px;
+    height: 16px;
+  }
+
+  &-select {
+    width: 12px;
+    height: 9px;
+  }
+
+  &-menu-sub-sale {
+    width: 36px;
+    height: 36px;
+  }
+
+  &-menu-sub-rent {
+    width: 36px;
+    height: 36px;
+  }
+
+  &-menu-sub-transporation {
+    width: 36px;
+    height: 36px;
+  }
+
+  @include respond($tabletLandscape) {
+
+   &-block-phone-dark {
+    fill: $colorWhite;
+   }
+
+   &-change-language-dark {
+    fill: $colorWhite;
+   }
+  }
+}

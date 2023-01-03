@@ -1,0 +1,21 @@
+
+.questions-form {
+	min-height: 586px;
+	padding: 100px 0 0;
+	background-image: url(../img/img-bg-questions-form.webp);
+	color: $colorWhite;
+
+	&__form {
+		margin-top: 59px;
+	}
+
+	@include respond($tabletPortrait) {
+		min-height: auto;
+		padding: 49px 0 34px;
+		background-size: cover;
+
+		&__form {
+			margin-top: 29px;
+		}
+	}
+}

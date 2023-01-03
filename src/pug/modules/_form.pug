@@ -1,0 +1,95 @@
+
+mixin form(className)
+  form(action="#" class=`modal-form ${className}`)
+    .modal-form__row.modal-form__row--between
+      .modal-form__item.modal-form__item--33
+        +input('text', 'name', '', 'modal-form__input', '')
+        +form-label('Ваше имя*')
+      .modal-form__item.modal-form__item--33
+        +input('text', 'phone', '', 'modal-form__input', '' )
+        +form-label('Ваш телефон*')
+      .modal-form__item.modal-form__item--33
+        +input('email', 'email', '', 'modal-form__input', '')
+        +form-label('E-mail')
+    .modal-form__row
+      +input('submit', '', 'Купить контейнер', 'modal-form__submit', '')
+
+
+mixin form-consult(className)
+  form(action="#" class=`modal-form ${className}`)
+    .modal-form__row.modal-form__row--between
+      .modal-form__item.modal-form__item--50
+        +input('text', 'name', '', 'modal-form__input', '')
+        +form-label('Ваше имя*')
+      .modal-form__item.modal-form__item--50
+        +input('text', 'phone', '', 'modal-form__input', '' )
+        +form-label('Ваш телефон*')
+    .modal-form__row
+      .modal-form__item
+        +textarea('question', 'modal-form__textarea')
+        +form-label('Ваш вопрос')
+    .modal-form__row
+      +input('submit', '', 'Получить консультацию', 'modal-form__submit', '')
+
+mixin form-calculation(className)
+  form(action="#" class=`modal-form modal-form--calculation ${className}`)
+    .modal-form__box
+      .modal-form__box-header Выберите тип контейнера:
+      .modal-form__row
+        .modal-form__item.modal-form__item--50
+          +select
+          +form-label('Тип контейнера*')
+    .modal-form__box
+      .modal-form__box-header Укажите размеры и вес коробов (одной упаковки):
+      .modal-form__row.modal-form__row--between
+        .modal-form__item.modal-form__item--50
+          +input('number', 'length', '', 'modal-form__input', '')
+          +form-label('Длинна, мм*')
+        .modal-form__item.modal-form__item--50
+          +input('number', 'height', '', 'modal-form__input', '')
+          +form-label('Высота, мм*')
+      .modal-form__row.modal-form__row--between
+        .modal-form__item.modal-form__item--50
+          +input('number', 'width', '', 'modal-form__input', '')
+          +form-label('Ширина, мм*')
+        .modal-form__item.modal-form__item--50
+          +input('number', 'weight', '', 'modal-form__input', '')
+          +form-label('Вес, кг*')
+    .modal-form__row
+      +input('submit', '', 'Рассчитать вместимость', 'modal-form__submit', '')
+
+
+mixin form-result(className)
+  form(action="#" class=`modal-form ${className}`)
+    .modal-form__row.modal-form__row--between
+      .modal-form__item.modal-form__item--50
+        +input('text', 'name', '', 'modal-form__input', '')
+        +form-label('Ваше имя*')
+      .modal-form__item.modal-form__item--50
+        +input('text', 'phone', '', 'modal-form__input', '' )
+        +form-label('Ваш телефон*')
+    .modal-form__row
+      +input('submit', '', 'Получить результат', 'modal-form__submit', '')
+
+
+mixin form-label(name)
+  label.modal-form__label= name
+
+mixin input(type, name, value, className, placeholder, required)
+  input(type = `${type}` name = `${name}` value=`${value}` class=`${className}` placeholder=`${placeholder}` required)
+
+mixin input-error(className, text)
+  div(class=`error ${className}`)= text
+
+mixin textarea(name, className)
+  textarea(name = `${name}` class=`${className}` required)
+
+mixin select
+  .select
+    input(class="select__input" type="hidden" name="" requered)
+    .select__head
+    .select__list
+      .select__item Контейнер 20'HC
+      .select__item Контейнер 40'HC
+      .select__item Контейнер 20'HC
+      .select__item Контейнер 40'HC

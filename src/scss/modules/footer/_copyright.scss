@@ -1,0 +1,13 @@
+
+.copyright {
+	margin-top: 21px;
+	max-width: 62%;
+	font-size: 12px;
+	color: $colorGraySquirrel;
+	line-height: 1.4;
+
+	@include respond($phoneSm) {
+		margin-top: 20px;
+		max-width: 100%;
+	}
+}

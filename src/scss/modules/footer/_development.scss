@@ -1,0 +1,23 @@
+
+.development {
+	margin-top: 89px;
+	@include alignJustify(flex-start, center);
+
+	&__text {
+		font-size: 12px;
+		color: $colorGraySquirrel;
+	}
+
+	&__link {
+		margin-left: 10px;
+
+		&:hover {
+			opacity: .8;
+		}
+	}
+
+	@include respond($phoneSm) {
+		margin-top: 20px;
+		justify-content: center;
+	}
+}

@@ -1,0 +1,33 @@
+
+include _slider-container
+
+mixin block-container
+  .block-container
+    .block-container__slider
+      +slider-container
+    .container-data.block-container__data
+      p Морские контейнеры 20 футов (6 метров) изготовлены на основе жесткого стального каркаса с обшивкой из профилированного металлического листа с антикоррозийной обработкой.
+      p 20 тонный контейнер изготавливается из стальных профильных листов толщиной 3 мм. Листы предварительно покрывают антикоррозийным напылением, благодаря которому обеспечивается отличная защита груза от влияния внешней среды при морских, а также других видах перевозок. Контейнер имеет крепкие двойные двери, а также хорошую запорную систему, которая дает гарантию сохранности груза при его транспортировке.
+      .container-specifications.container-data__specifications
+        +container-specifications-item('Размеры внешние (ДxШxВ)', '6058 x 2438 x 2896 мм.')
+        +container-specifications-item('Размеры внутренние (ДxШxВ)', '5898 x 2352 x 2698 мм.')
+        +container-specifications-item('Максимальная масса брутто', '28 тонн')
+        +container-specifications-item('Тара (вес)', '2 340 кг.')
+        +container-specifications-item('Максимальная загрузка', '28 140 кг.')
+        +container-specifications-item('Тип', 'Hight Cube')
+        +container-specifications-item('Состояние', 'Новый')
+        +container-specifications-item('Объем', '37.5 куб. м.')
+      .container-availability.container-data__availability
+        span.container-availability__icon
+          +icon('icon-maps-hint-yes')
+        span.container-availability__text В наличии
+      .data-action.container-data__action
+        a(href="#modal-sell" class="data-action__item data-action__item--buy" data-fancybox="modal-sell") Купить контейнер
+        a(href="#modal-rent" class="data-action__item data-action__item--rent" data-fancybox="modal-rent") Арендовать контейнер
+        
+
+
+mixin container-specifications-item(name, value)
+  .container-specifications__item
+    span.container-specifications__name= name
+    span.container-specifications__value= value

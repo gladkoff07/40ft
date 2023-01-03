@@ -1,0 +1,69 @@
+
+.page-contact {
+
+	&__maps {
+		position: relative;
+		margin-top: 48px;
+	}
+
+	@include respond($phoneSm) {
+
+		&__maps {
+			margin-top: 33px;
+
+			& > img {
+				height: 550px;
+				object-fit: cover;
+			}
+		}
+	}
+}
+
+.page-maps-hit {
+	position: absolute;
+	left: 47.8%;
+	top: 34.7%;
+	@include alignJustify(center, center);
+	width: 60px;
+	height: 60px;
+	background-color: $colorWhite;
+	z-index: 1;
+
+	&:after {
+		@include content('', 10%, auto);
+		width: 0;
+		height: 0;
+		bottom: -10px;
+		border-top: 10px solid $colorWhite;
+		border-right: 6px solid transparent;
+		border-left: 6px solid transparent;
+	}
+
+	img {
+		max-width: 35px;
+	}
+
+	@include respond($largeDesktop_1365) {
+		top: 32.7%;
+	}
+
+	@include respond($largeDesktop_1279) {
+		top: 34.5%;
+		left: 47.5%;
+	}
+
+	@include respond($tabletLandscape) {
+		left: 47%;
+		top: 34.5%;
+	}
+
+	@include respond($tabletPortrait) {
+		left: 46.5%;
+		top: 14.5%;
+	}
+
+	@include respond($phoneSm) {
+		left: 41%;
+		top: 35%;
+	}
+}

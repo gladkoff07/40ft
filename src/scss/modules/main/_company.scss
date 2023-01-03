@@ -1,0 +1,120 @@
+
+.company {
+	min-height: 850px;
+	background-image: url(../img/img-bg-company.webp);
+
+	.container {
+		padding-top: 250px;
+		position: relative;
+	}
+
+	&__img {
+		position: absolute;
+		top: 0;
+		width: 56.9%;
+	}
+
+	&__content {
+		margin-left: auto;
+		// margin-right: -3px;
+		width: 100%;
+		max-width: 704px;
+		padding: 58px 60px 91px 160px;
+		background: url(../img/img-pattern-light.svg) repeat-x, $colorPeriwinkleCrayola;
+		
+		.section-header {
+			margin-bottom: 23px;
+		}
+
+		p {
+			margin-bottom: 9px;
+			line-height: 1.4;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		&-readmore {
+			margin-top: 31px;
+			display: inline-block;
+			padding: 26px 80px;
+			background-color: $colorBlackSea;
+			font-family: 'Gilroy SemiBold';
+			color: $colorWhite;
+			text-decoration: none;
+
+			&:hover {
+	      background-color: $colorVioletBlueCrayola;
+	    }
+		}
+	}
+
+	@include respond($largeDesktop_1365) {
+
+		&__img {
+			width: 52%;
+		}
+	}
+
+	@include respond($largeDesktop_1279) {
+
+		&__img {
+			width: 43%;
+		}
+	}
+
+	@include respond($tabletLandscape) {
+		min-height: auto;
+		background-size: cover;
+
+		&__img {
+			width: 50%;
+		}
+
+		&__content {
+			max-width: 76%;
+			padding: 58px 10% 58px;
+		}
+	}
+
+	@include respond($tabletPortrait) {
+
+		.container {
+			padding-top: 0;
+		}
+
+		&__img {
+			width: 100%;
+			position: relative;
+			text-align: center;
+
+			// img {
+			// 	max-width: 80%;
+			// }
+		}
+
+		&__content {
+			margin: 49px -15px 0;
+			width: auto;
+			max-width: initial;
+			padding: 28px 4.6% 31px;
+
+			.section-header {
+				margin-bottom: 11px;
+			}
+
+			p {
+				margin-bottom: 10px;
+				line-height: 1.43;
+			}
+
+			&-readmore {
+				margin-top: 10px;
+				padding: 26px 0;
+				width: 100%;
+				text-align: center;
+			}
+		}
+	}
+}

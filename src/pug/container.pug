@@ -1,0 +1,29 @@
+extends template/_main
+
+include modules/_header-inner-color
+include modules/_breadcrumbs
+include modules/_list-container
+include modules/_section-link
+
+block variables
+  - var title = 'Контейнеры'
+
+
+block content
+  //- wrapper head
+  .wrapper-head.wrapper-head--page
+    //- header
+    +header-inner-color
+    //- intro
+    section.page-intro.page-intro--periwinkle-crayola
+      .container
+        //- breadcrumbs
+        +breadcrumbs('page-intro__breadcrumbs', 'Главная', 'Контейнеры')
+        //- header 
+        h1.page-header.page-header--small.page-intro__header Контейнеры
+  //- main
+  main.main.section
+    .container
+      +list-container('')
+  //- section-link
+  +section-link

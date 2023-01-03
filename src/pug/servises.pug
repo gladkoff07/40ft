@@ -1,0 +1,31 @@
+extends template/_main
+
+include modules/_header-inner-color
+include modules/_breadcrumbs
+include modules/_list-servises
+include modules/_list-servises-transportation
+include modules/_section-link
+
+block variables
+  - var title = 'Услуги'
+
+
+block content
+  //- wrapper head
+  .wrapper-head.wrapper-head--page
+    //- header
+    +header-inner-color
+    //- intro
+    section.page-intro.page-intro--periwinkle-crayola
+      .container
+        //- breadcrumbs
+        +breadcrumbs('page-intro__breadcrumbs', 'Главная', 'Услуги')
+        //- header 
+        h1.page-header.page-header--small.page-intro__header Услуги
+  //- main
+  main.main.section
+    .container
+      +list-servises('')
+      +list-servises-transportation('list-servises-transportation--color main__list-transportation')
+  //- section-link
+  +section-link

@@ -1,0 +1,16 @@
+
+mixin slider-staff(className)
+  div(class=`slider-staff swiper ${className} js-slider-staff`)
+    .swiper-wrapper
+      +swiper-slide-item('img-staff-1', 'img-staff-1-2x')
+      +swiper-slide-item('img-staff-2', 'img-staff-2-2x')
+      +swiper-slide-item('img-staff-1', 'img-staff-1-2x')
+      +swiper-slide-item('img-staff-2', 'img-staff-2-2x')
+
+    //- swiper-pagination
+    .swiper-button-prev
+    .swiper-button-next
+
+mixin swiper-slide-item(imgName, imgName2x)
+  .swiper-slide
+    img(srcset=`img/${imgName}.webp 1x, img/${imgName2x}.webp 2x` src=`img/${imgName}.webp` loading="lazy")

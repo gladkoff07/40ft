@@ -1,0 +1,15 @@
+
+include _list-servises
+include _list-servises-transportation
+
+mixin servises
+  section.servises
+    .container
+      .section-head
+        h2.section-header.section-head__header Наши услуги
+        .section-head__content
+          .section-head__content-text С учётом сложившейся международной обстановки, повышение уровня гражданского сознания играет важную роль в формировании укрепления моральных ценностей. Принимая во внимание показатели успешности, понимание сути ресурсосберегающих вывода текущих активов.
+      //- list servises container
+      +list-servises('servises__list-container')
+      //- list servises transportation
+      +list-servises-transportation('servises__list-transportation')

@@ -1,0 +1,109 @@
+
+@import './_home-intro';
+@import './_video';
+@import './_slider-achievements';
+@import './_servises';
+@import './_container-rental';
+@import './_container-selection';
+@import './_company';
+@import './_why-we';
+@import './_questions-form';
+@import './_section-link';
+@import './_block-contact';
+@import './_breadcrumbs';
+@import './_page-intro';
+@import './_block-container';
+@import './_slider-all';
+@import './_block-404';
+@import './_page-contact';
+@import './_servises-page-info';
+@import './_benefits';
+@import './_security-guarantee';
+@import './_logistics-services';
+@import './_servises-other';
+@import './_intercity-transportation';
+
+.main {
+	padding: 100px 0 100px;
+
+	&-small {
+		padding: 50px 0 98px;
+	}
+
+	&__list-transportation {
+		margin-top: 20px;
+	}
+
+	@include respond($tabletPortrait) {
+		padding: 50px 0 49px;
+
+		&-small {
+			padding: 42px 0 52px;
+		}
+	}
+}
+
+.section-head {
+	$sh: &;
+
+	@include alignJustify(space-between, flex-start);
+
+	&--center {
+		align-items: center;
+
+		#{$sh}__content {
+			margin-top: 45px;
+		}
+	}
+
+	&__header {
+		max-width: 41%;
+		margin-bottom: 25px;
+	}
+
+	&__content {
+		max-width: 49.5%;
+		padding-right: 10%;
+		line-height: 1.4;
+
+		&-link {
+			margin-top: 29px;
+		}
+	}
+
+	@include respond($tabletLandscape) {
+		flex-direction: column;
+
+		&--center {
+			align-items: flex-start;
+
+			#{$sh}__content {
+				margin-top: 0;
+			}
+		}
+
+		&__header {
+			max-width: 100%;
+		}
+
+		&__content {
+			max-width: 100%;
+			padding-right: 0;
+		}
+	}
+
+	@include respond($tabletPortrait) {
+
+		&__header {
+			margin-bottom: 10px;
+		}
+
+		&__content {
+			line-height: 1.44;
+
+			&-link {
+				margin-top: 9px;
+			}
+		}
+	}
+}

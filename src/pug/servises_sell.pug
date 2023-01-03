@@ -1,0 +1,60 @@
+extends template/_main
+
+include modules/_header-inner-img
+include modules/_breadcrumbs
+include modules/_benefits
+include modules/_container-rental
+include modules/_container-selection
+include modules/_security-guarantee
+include modules/_logistics-services
+include modules/_questions-form
+include modules/_section-link
+
+block variables
+  - var title = 'Продажа контейнеров'
+
+
+block content
+  //- wrapper head
+  .wrapper-head.wrapper-head--servises-sell
+    //- header
+    +header-inner-img
+    //- intro
+    section.page-intro.page-intro--color-white
+      .container
+        //- breadcrumbs
+        +breadcrumbs('breadcrumbs--color-white page-intro__breadcrumbs', 'Главная', 'Услуги', 'Продажа контейнеров')
+        //- header page
+        h1.page-header.page-header--small.page-intro__header Продажа контейнеров
+        .page-intro__description Каждый из нас понимает очевидную вещь: убеждённость некоторых оппонентов создаёт необходимость в производственный план целого ряда внеочередных мероприятий с учётом комплекса своевременного выполнения сверхзадачи. 
+  //- main
+  main.main.section
+    .container
+      .servises-page-info
+        .servises-page-info__img
+          img(srcset=`img/img-servises-page-sell.webp 1x, img/img-servises-page-sell-2x.webp 2x` src=`img/img-servises-page-sell.webp` loading="lazy")
+        .servises-page-info__content
+          h2.section-header Продажа морских контейнеров – ключевое направление деятельности «40 футов».
+          p С учётом сложившейся международной обстановки, повышение уровня гражданского сознания играет важную роль в формировании укрепления моральных ценностей. Принимая во внимание показатели успешности, понимание сути ресурсосберегающих вывода текущих активов.
+          ul
+            li Большой (свыше 1000 единиц) парк многооборотной тары. Складская программа позволяет быстро обеспечить нужды клиентов. Без очередей и ожидания.
+            li Стандартные и специализированные модули различного объема удовлетворяют потребности в таре для ЛЮБЫХ грузов, включая негабаритные.
+            li Надежные запорные механизмы и возможность пломбировки гарантируют сохранность товаров при их перевозке контейнерами.
+            li Стандартизированная тара подходит для организации мультимодальных перевозок без перетарки.
+          p
+            b Продажа б/у морских контейнеров – экономия бюджета без ущерба для эксплуатационных свойств
+          p Каждая единица проходит тщательную предпродажную подготовку. Клиент получает полностью готовый к использованию контейнер, соответствующий стандартам ISO, с долгим сроком службы без ремонта и доработки.
+  //- benefits
+  +benefits('Преимущества покупки контейнеров у нас')
+  //- container-rental
+  +container-rental('Купите контейнер в любой точке мира')
+  //- container-selection
+  +container-selection
+  //- security guarantee
+  +security-guarantee
+  //- logistics services
+  +logistics-services
+  //- questions-form
+  +questions-form
+  //- section-link
+  +section-link

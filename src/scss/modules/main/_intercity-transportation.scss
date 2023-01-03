@@ -1,0 +1,207 @@
+
+.intercity-transportation {
+	padding: 97px 0 83px;
+	background-color: $colorBlackSea;
+	color: $colorWhite;
+
+	.container {
+		position: relative;
+	}
+
+	&__data {
+		width: 51%;
+	}
+
+	&__maps {
+		width: 100%;
+		max-width: 1142px;
+		position: absolute;
+		top: 23px;
+		right: -190px;
+	}
+
+	&__intro-text {
+		margin-top: 23px;
+		max-width: 78%;
+		line-height: 1.4;
+	}
+
+	&__cities {
+		max-width: 59.5%;
+		margin-top: 51px;
+	}
+
+	@include respond($largeDesktop_1860) {
+
+		&__maps {
+			right: -80px;
+			width: 75%;
+		}
+	}
+
+	@include respond($largeDesktop_1650) {
+
+		&__maps {
+			right: 0;
+			width: 70%;
+		}
+	}
+
+	@include respond($largeDesktop_1365) {
+
+		&__maps {
+			top: 25%;
+		}
+	}
+
+	@include respond($tabletLandscape) {
+		background-color: transparent;
+
+		&__data {
+			width: 100%;
+			color: $colorDarkGreyBlue;
+		}
+
+		&__maps {
+			margin: 34px -13px 0;
+			width: calc(100% + 26px);
+			position: static;
+			top: auto;
+			right: auto;
+		}
+
+		&__intro-text {
+			max-width: 100%;
+			margin-top: 11px;
+		}
+	}
+
+	@include respond($tabletPortrait) {
+		padding: 8px 0 0;
+	}
+}
+
+.participating-cities {
+
+	&__head {
+		max-width: 90%;
+		font-family: 'Gilroy SemiBold';
+	}
+
+	&__list {
+		margin-top: 23px;
+	}
+
+	@include respond($tabletLandscape) {
+		display: none;
+	}
+}
+
+.list-participating-cities {
+	column-count: 2;
+
+	&__item {
+		margin-bottom: 10px;
+	}
+
+	&__link {
+		color: $colorWhite;
+		text-decoration: none;
+		line-height: 1.4;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.frame-intercity-maps {
+	color: $colorDarkGreyBlue;
+
+	&-label {
+		position: absolute;
+
+		&--one {
+			left: 6%;
+			top: 45%;
+		}
+
+		&--two {
+			left: 5.5%;
+			top: 53.6%;
+		}
+
+		&--three {
+			left: 4.5%;
+	    top: 60.6%;
+		}
+
+		&--four {
+			left: 23%;
+	    top: 35.6%;
+		}
+
+		&--five {
+			left: 26.4%;
+	    top: 49%;
+		}
+
+		&--six {
+			left: 35.6%;
+	    top: 13%;
+		}
+
+		&--seven {
+			left: 40%;
+	    top: 68.5%;
+		}
+
+		&--eight {
+			left: 48.5%;
+	    top: 42.5%;
+		}
+
+		&--nine {
+			left: 59.8%;
+	    top: 24%;
+		}
+
+		&--ten {
+			left: 75.5%;
+	    top: 21%;
+		}
+
+		&--eleven {
+			left: 72.8%;
+	    top: 54.5%;
+		}
+
+		&--twelve {
+			left: 80.5%;
+	    top: 63.5%;
+		}
+
+		&--thirteen{
+			left: 86%;
+	    top: 50%;
+		}
+	}
+
+	@include respond($tabletLandscape) {
+		background-color: $colorBlackSea;
+		padding: 30px 15px;
+
+		& > img {
+			display: none;
+		}
+
+		&-label {
+			position: static;
+			margin-bottom: 17px;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

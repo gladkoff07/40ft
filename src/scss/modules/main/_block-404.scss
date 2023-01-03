@@ -1,0 +1,71 @@
+
+.block-404 {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&__head {
+		@include fontFamily(450px, 'Gilroy SemiBold');
+		color: transparent;
+		-webkit-text-stroke: 1px $colorWhite;
+		line-height: 1;
+	}
+
+	&__text {
+		margin-top: 19px;
+		@include fontFamily(40px, 'Gilroy SemiBold');
+	}
+
+	&__description {
+		max-width: 38%;
+		margin-top: 25px;
+		line-height: 1.4;
+	}
+
+	&__link {
+		margin-top: 50px;
+		display: inline-block;
+		padding: 25px 93px;
+		font-family: 'Gilroy SemiBold';
+		color: $colorWhite;
+		background-color: $colorBlackSea;
+		text-decoration: none;
+
+		&:hover {
+      background-color: $colorVioletBlueCrayola;
+    }
+	}
+
+	@include respond($tabletLandscape) {
+
+		&__head {
+			font-size: 350px;
+		}
+
+		&__description {
+			max-width: 80%;
+		}
+	}
+
+	@include respond($tabletPortrait) {
+
+		&__head {
+			font-size: 180px;
+		}
+
+		&__text {
+			margin-top: 50px;
+			font-size: 30px;
+		}
+
+		&__description {
+			margin-top: 22px;
+			max-width: 95%;
+		}
+
+		&__link {
+			padding: 28px 97px;
+		}
+	}
+}

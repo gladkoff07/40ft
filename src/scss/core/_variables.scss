@@ -1,0 +1,36 @@
+// Colors
+$colorWhite: #fff;
+$colorBlack: #000;
+$colorAccent: #f1c40f;
+
+$colorGraySquirrel: #737780;
+$colorDarkGreyBlue: #262B33;
+$colorBlackSea: #1F4899;
+$colorVioletBlueCrayola: #335EB2;
+$colorPeriwinkleCrayola: #F7F8FA;
+$colorIndianGreen: #0a9929;
+$colorPeriwinkleCrayola_E4: #E4E8F0;
+$colorPeriwinkleCrayola_EB: #EBEEF5;
+
+// Size
+$fontSize: 15px;
+$fontLineHeight: 1.3;
+
+// Fonts
+$fontDefault: "Gilroy Regular";
+$fontFallback: Helvetica, sans-serif;
+$font: $fontDefault, $fontFallback;
+
+// Transition
+$varTrs: 0.3s ease-in-out;
+
+// Breakpoints
+$phoneXs: "(max-width: 375px)";
+$phoneSm: "(max-width: 575px)";
+$tabletPortrait: "(max-width: 767px)";
+$tabletLandscape: "(max-width: 1023px)";
+$largeDesktop_1279: "(max-width: 1279px)";
+$largeDesktop_1365: "(max-width: 1365px)";
+$largeDesktop: "(max-width: 1449px)";
+$largeDesktop_1650: "(max-width: 1649px)";
+$largeDesktop_1860: "(max-width: 1859px)";

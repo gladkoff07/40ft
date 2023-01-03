@@ -1,0 +1,8 @@
+
+.logo {
+  transition: all $varTrs;
+
+  .logo__img-active {
+    display: none;
+  }
+}

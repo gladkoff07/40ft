@@ -1,0 +1,27 @@
+
+.servises-other {
+  padding: 98px 0 98px;
+
+  .section-head__header {
+    max-width: 45%;
+  }
+
+  &__list-container {
+    margin-top: 26px;
+  }
+
+  @include respond($tabletLandscape) {
+
+    .section-head__header {
+      max-width: 100%;
+    }
+  }
+
+  @include respond($tabletPortrait) {
+    padding: 49px 0 51px;
+
+    &__list-container {
+      margin-top: 30px;
+    }
+  }
+}

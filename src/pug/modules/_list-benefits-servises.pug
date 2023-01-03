@@ -1,0 +1,28 @@
+
+
+mixin list-benefits-servises(className)
+  div(class=`list-benefits swiper ${className} js-slider-benefits`)
+    .swiper-wrapper
+      +swiper-slide('icon-benefits-servises-price', 'Доступная цена', 'С учётом сложившейся международной обстановки, повышение уровня гражданского сознания играет важную роль в формировании укрепления моральных ценностей.')
+      +swiper-slide('icon-benefits-servises-delivery', 'Доставка в любой регион', 'С учётом сложившейся международной обстановки, повышение уровня гражданского сознания играет важную роль в формировании укрепления моральных ценностей.')
+      +swiper-slide('icon-benefits-servises-save', 'Безопасность', 'С учётом сложившейся международной обстановки, повышение уровня гражданского сознания играет важную роль в формировании укрепления моральных ценностей.')
+      +swiper-slide-other('Индивидуальный подбор контейнеров под ваши требования и размеры', 'С учётом сложившейся международной обстановки, повышение уровня гражданского сознания играет важную роль в формировании укрепления моральных ценностей.')
+
+    .swiper-button-prev
+    .swiper-button-next
+
+mixin swiper-slide(icon, name, text)
+  .swiper-slide
+    .list-benefits__item
+      .list-benefits__icon
+        +icon(icon)
+      .list-benefits__name= name
+      .list-benefits__content= text
+  
+
+mixin swiper-slide-other(name, text)
+  .swiper-slide
+    .list-benefits__item.list-benefits__item--highlight
+      .list-benefits__name= name
+      .list-benefits__content= text
+      a(href="#" class="list-benefits__link") Подобрать контейнер

@@ -1,0 +1,38 @@
+extends template/_main
+
+include modules/_header-inner-color
+include modules/_breadcrumbs
+include modules/_block-container
+include modules/_questions-form
+include modules/_section-link
+include modules/_modal
+
+block variables
+  - var title = 'Контейнеры высокие'
+
+
+block content
+  // wrapper head
+  .wrapper-head.wrapper-head--page
+    // header
+    +header-inner-color
+    // intro
+    section.page-intro.page-intro--periwinkle-crayola
+      .container
+        //- breadcrumbs
+        +breadcrumbs('page-intro__breadcrumbs', 'Главная', 'Контейнеры', "Контейнеры 20'HC высокие" )
+        //- header 
+        h1.page-header.page-header--small.page-intro__header Контейнеры 20'HC высокие
+  // main
+  main.main.main-small.section
+    .container
+      +block-container
+  // questions-form
+  +questions-form
+  // section-link
+  +section-link
+
+  // modal sell
+  +modal-sell
+  // modal rent
+  +modal-rent
