@@ -1,6 +1,6 @@
 extends template/_main
 
-include modules/_header-inner-img
+include modules/_header
 include modules/_breadcrumbs
 include modules/_about-info
 include modules/_mission
@@ -21,7 +21,7 @@ block content
     video(playsinline autoplay muted loop)
       source( src="video/video-background.mp4" type="video/mp4")
     // header
-    +header-inner-img
+    +header
     //- intro
     section.page-intro.page-intro--color-white
       .container

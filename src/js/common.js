@@ -151,6 +151,15 @@ $(function () {
     });
   });
 
+  // hover menu
+  $('.wrapper-menu-inner').hover(function() {
+
+    $(this).prev('.menu__link').addClass('menu__link--active')
+  }, function() {
+      $(this).prev('.menu__link').removeClass('menu__link--active')
+    }
+  );
+
 });
 
 document.addEventListener('DOMContentLoaded', function () {

@@ -1,6 +1,6 @@
 extends template/_main
 
-include modules/_header-inner-color
+include modules/_header
 include modules/_breadcrumbs
 include modules/_page-contact
 include modules/_questions-form
@@ -12,9 +12,9 @@ block variables
 
 block content
   //- wrapper head
-  .wrapper-head.wrapper-head--page
+  .wrapper-head
     //- header
-    +header-inner-color
+    +header
     //- intro
     section.page-intro.page-intro--periwinkle-crayola
       .container

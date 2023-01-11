@@ -31,8 +31,10 @@
 
 
   &--home {
-    height: 950px;
+    // height: 950px;
+    height: 100vh;
     background-image: url(../img/img-bg-intro-home.webp);
+    background-size: cover;
 
     &:before {
       content: none;
@@ -44,13 +46,14 @@
 
     .menu__link,
       .block-phone__number,
-      .menu-inner__link {
+      // .menu-inner__link 
+      {
         color: $colorDarkGreyBlue;
     }
 
-    .wrapper-menu-inner {
-      background-color: $colorPeriwinkleCrayola;
-    }
+    // .wrapper-menu-inner {
+    //   background-color: $colorPeriwinkleCrayola;
+    // }
 
     .block-phone__item {
       border-color: $colorPeriwinkleCrayola_EB;
@@ -232,7 +235,8 @@
   }
 
   &__menu {
-    margin-left: 4%;
+    // margin-left: 4%;
+    margin-left: 3.4%;
   }
 
   &__block-phone {

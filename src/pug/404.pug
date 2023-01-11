@@ -1,6 +1,6 @@
 extends template/_404
 
-include modules/_header-inner-img
+include modules/_header
 
 block variables
   - var title = '404'
@@ -10,7 +10,7 @@ block content
   //- wrapper head
   .wrapper-head.wrapper-head--404
     //- header
-    +header-inner-img
+    +header
     //- intro
     section.page-intro.page-intro--404
       .container
