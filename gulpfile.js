@@ -36,7 +36,7 @@ const config = {
     watch: `${coreDir.src}/scss/**/*.scss`,
   },
   img: {
-    src: `${coreDir.src}/img/*`,
+    src: `${coreDir.src}/img/**/*`,
     dist: `${coreDir.dist}/img`,
     watch: `${coreDir.src}/img/**/*`,
   },
