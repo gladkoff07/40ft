@@ -13,6 +13,7 @@ Fancybox.bind("[data-fancybox]", {
   slideClass: "modal-close",
   autoFocus: false
 });
+Fancybox.defaults.Hash = false;
 
 // Swiper init achievements
 const swiperAchievements = new Swiper(".js-slider-achievements", {

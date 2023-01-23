@@ -228,6 +228,16 @@
     }
   }
 
+  @media only screen and (min-width: 1700px) {
+
+    &__item {
+
+      &--33 {
+        max-width: 33%;
+      }
+    }
+  }
+
   @include respond($tabletPortrait) {
 
     &__row {

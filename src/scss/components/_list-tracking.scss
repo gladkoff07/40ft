@@ -45,6 +45,13 @@
 		}
 	}
 
+	@media only screen and (min-width: 1500px) {
+
+		&__item {
+			max-width: 48.5%;
+		}
+	}
+
 	@include respond($tabletPortrait) {
 
 		&__item {
