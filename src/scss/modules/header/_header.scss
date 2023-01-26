@@ -87,10 +87,10 @@
 
   &--404 {
     justify-content: flex-start;
-    min-height: 100vh;
-    background-image: url(../img/img-bg-404.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
+    // min-height: 100vh;
+    // background-image: url(../img/img-bg-404.webp);
+    // background-size: cover;
+    // background-repeat: no-repeat;
   }
 
   &--servises-rent {
@@ -280,7 +280,8 @@
 
   @include respond($tabletLandscape) {
     padding: 16px 0;
-    border-bottom: 1px solid $colorPeriwinkleCrayola_EB;
+    // border-bottom: 1px solid $colorPeriwinkleCrayola_EB;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 
     &--active {
       background-color: $colorWhite !important;

@@ -68,4 +68,11 @@
 			padding: 28px 97px;
 		}
 	}
+
+	@include respond($phoneSm) {
+
+		&__link {
+			padding: 28px 60px;
+		}
+	}
 }

@@ -12,6 +12,9 @@
 	&--404 {
 		margin: auto;
 		padding: 60px 0 60px;
+		background-image: url(../img/img-bg-404.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
 		color: $colorWhite;
 	}
 
