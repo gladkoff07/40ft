@@ -2,7 +2,18 @@
 .logo {
   transition: all $varTrs;
 
-  .logo__img-active {
+  &__img-normal {
+    display: inline-block;
+  }
+
+  &__img-active {
     display: none;
+  }
+
+  a {
+
+    &:hover {
+      opacity: .8;
+    }
   }
 }
