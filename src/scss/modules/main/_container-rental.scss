@@ -144,6 +144,13 @@
 		}
 	}
 
+	&:hover {
+
+		.maps-label-add-info {
+			display: block;
+		}
+	}
+
 	@include respond($tabletLandscape) {
 		position: static;
 		margin-bottom: 17px;
@@ -155,6 +162,8 @@
 }
 
 .maps-label {
+	$ml: &;
+
 	position: relative;
 	width: 24px;
 	height: 24px;
@@ -171,6 +180,22 @@
 		bottom: -5px;
 		border: 5px solid rgba(255, 255, 255, 0.3);
 		border-radius: 50%;
+	}
+
+	&-add-info {
+		display: none;
+		position: absolute;
+		top: -20px;
+		right: 20px;
+		padding: 3px 5px;
+		background-color: $colorWhite;
+		white-space: nowrap;
+
+		&__city {}
+
+		&__value {
+			margin-left: 5px;
+		}
 	}
 
 	@include respond($tabletLandscape) {

@@ -13,34 +13,50 @@ mixin container-rental(headerName)
         .maps-label.js-maps-label 8
         //- hint
         +maps-hint('maps-hint--top wrapper-maps-label__hint wrapper-maps-label__hint--top')
+        //- info
+        +maps-label-add-info('Стамбул', '(20 шт)')
       .wrapper-maps-label.wrapper-maps-label--two
         .maps-label.js-maps-label 3
         //- hint
         +maps-hint('maps-hint--top wrapper-maps-label__hint wrapper-maps-label__hint--top')
+        //- info
+        +maps-label-add-info('Стамбул', '(22 шт)')
       .wrapper-maps-label.wrapper-maps-label--three
         .maps-label.js-maps-label 4
         //- hint
         +maps-hint('maps-hint--top wrapper-maps-label__hint wrapper-maps-label__hint--top')
+        //- info
+        +maps-label-add-info('Стамбул', '(0 шт)')
       .wrapper-maps-label.wrapper-maps-label--four
         .maps-label.js-maps-label 1
         //- hint
         +maps-hint('maps-hint--middle wrapper-maps-label__hint wrapper-maps-label__hint--middle')
+        //- info
+        +maps-label-add-info('Стамбул', '(30 шт)')
       .wrapper-maps-label.wrapper-maps-label--five
         .maps-label.js-maps-label 5
         //- hint
         +maps-hint('maps-hint--bottom wrapper-maps-label__hint wrapper-maps-label__hint--bottom')
+        //- info
+        +maps-label-add-info('Стамбул', '(20 шт)')
       .wrapper-maps-label.wrapper-maps-label--six
         .maps-label.js-maps-label 4
         //- hint
         +maps-hint('maps-hint--middle-left wrapper-maps-label__hint wrapper-maps-label__hint--middle-left')
+        //- info
+        +maps-label-add-info('Стамбул', '(20 шт)')
       .wrapper-maps-label.wrapper-maps-label--seven
         .maps-label.js-maps-label 2
         //- hint
         +maps-hint('maps-hint--middle-left wrapper-maps-label__hint wrapper-maps-label__hint--middle-left')
+        //- info
+        +maps-label-add-info('Стамбул', '(20 шт)')
       .wrapper-maps-label.wrapper-maps-label--eight
         .maps-label.js-maps-label 7
         //- hint
         +maps-hint('maps-hint--top-left wrapper-maps-label__hint wrapper-maps-label__hint--top-left')
+        //- info
+        +maps-label-add-info('Стамбул', '(2 шт)')
       // add
       .rental-maps-add
         a(href="#" class="hint-maps-add")
@@ -90,3 +106,9 @@ mixin maps-hint(className)
             .manager-maps-hint__name Сарвар Каримов
             .manager-maps-hint__position Руководитель по странам СНГ и СА
       a(href="#" class="maps-hint__link-button") Получить консультацию
+
+
+mixin maps-label-add-info(city, value)
+  .maps-label-add-info
+    span.maps-label-add-info__city= city
+    span.maps-label-add-info__value= value
